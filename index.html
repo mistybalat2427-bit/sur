@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Something Special</title>
+
+<link rel="stylesheet"
+      href="style.css">
+
+<script src="script.js"
+        defer></script>
+```
+
+</head>
+
+<body>
+
+```
+<!-- =================================================
+     MAGICAL CURTAIN TRANSITION
+     ================================================= -->
+
+<div id="cinematicTransition">
+
+
+    <!-- LEFT CURTAIN -->
+
+    <div class="magicCurtain curtainLeft">
+
+        <div class="curtainFold fold1"></div>
+        <div class="curtainFold fold2"></div>
+        <div class="curtainFold fold3"></div>
+        <div class="curtainFold fold4"></div>
+
+    </div>
+
+
+    <!-- RIGHT CURTAIN -->
+
+    <div class="magicCurtain curtainRight">
+
+        <div class="curtainFold fold1"></div>
+        <div class="curtainFold fold2"></div>
+        <div class="curtainFold fold3"></div>
+        <div class="curtainFold fold4"></div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =================================================
+     GAME PHASE
+     ================================================= -->
+
+<div id="gamePhase">
+
+
+    <!-- GAME BACKGROUND -->
+
+    <div class="gameMoon"></div>
+
+
+    <div class="gameStars"
+         id="gameStars"></div>
+
+
+    <div class="gameAtmosphere"
+         id="gameAtmosphere"></div>
+
+
+
+    <!-- =================================================
+         GAME INTRO CARD
+         ================================================= -->
+
+    <div class="gameCard">
+
+
+        <div class="gameIcon">
+            🌙
+        </div>
+
+
+        <h2>
+            How Well Do You Know Me? 👀
+        </h2>
+
+
+        <p class="gameIntro">
+            Let's see... how much do you really remember? ✨
+        </p>
+
+
+        <button id="gameStart">
+            Let's find out 💫
+        </button>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         LEVEL SELECTION
+         ================================================= -->
+
+    <div id="levelSelect">
+
+
+        <div class="levelSelectTitle">
+
+            <span>
+                🌙
+            </span>
+
+
+            <h2>
+                Choose Your Level
+            </h2>
+
+
+            <p>
+                Let's see how far you can go... 👀
+            </p>
+
+        </div>
+
+
+
+        <!-- =============================================
+             LEVEL 1
+             ============================================= -->
+
+        <button class="levelBox levelUnlocked"
+                id="level1Button">
+
+
+            <div class="levelNumber">
+                I
+            </div>
+
+
+            <div class="levelMonkey">
+                🐒
+            </div>
+
+
+            <div class="levelInfo">
+
+                <h3>
+                    Level 1
+                </h3>
+
+
+                <p>
+                    Maybe you know me... ✨
+                </p>
+
+            </div>
+
+
+            <div class="levelStatus">
+                PLAY →
+            </div>
+
+
+        </button>
+
+
+
+       <!-- =============================================
+     LEVEL 2
+     ============================================= -->
+
+<div class="levelBox levelLocked"
+     id="level2Button">
+
+    <div class="levelNumber">
+        II
+    </div>
+
+    <div class="levelLock">
+        🔒
+    </div>
+
+    <div class="levelInfo">
+
+        <h3>
+            Level 2
+        </h3>
+
+        <p>
+            Getting mysterious...
+        </p>
+
+    </div>
+
+    <div class="levelStatus">
+        LOCKED
+    </div>
+
+</div>
+
+
+
+        <!-- =============================================
+             LEVEL 3
+             ============================================= -->
+
+        <div class="levelBox levelLocked">
+
+
+            <div class="levelNumber">
+                III
+            </div>
+
+
+            <div class="levelLock">
+                🔒
+            </div>
+
+
+            <div class="levelInfo">
+
+                <h3>
+                    Level 3
+                </h3>
+
+
+                <p>
+                    Can you really know me?
+                </p>
+
+            </div>
+
+
+            <div class="levelStatus">
+                LOCKED
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         LEVEL 2 — JUNGLE ENTRANCE
+         COMPLETELY SEPARATE FROM LEVEL 1
+         ================================================= -->
+
+    <div id="level2Intro">
+
+
+        <!-- JUNGLE DECORATION -->
+
+        <div class="jungleDecor"
+             aria-hidden="true">
+
+
+            <span class="jungleLeaf leaf1">
+                🍃
+            </span>
+
+
+            <span class="jungleLeaf leaf2">
+                🌿
+            </span>
+
+
+            <span class="jungleLeaf leaf3">
+                🍃
+            </span>
+
+
+            <span class="jungleLeaf leaf4">
+                🌿
+            </span>
+
+
+            <span class="jungleAnimal animal1">
+                🦋
+            </span>
+
+
+            <span class="jungleAnimal animal2">
+                🐒
+            </span>
+
+
+            <span class="jungleAnimal animal3">
+                🦜
+            </span>
+
+
+            <span class="jungleFlower flower1">
+                🌼
+            </span>
+
+
+            <span class="jungleFlower flower2">
+                🌸
+            </span>
+
+
+            <span class="junglePaw paw1">
+                🐾
+            </span>
+
+
+            <span class="junglePaw paw2">
+                🐾
+            </span>
+
+
+        </div>
+
+
+
+        <!-- JUNGLE CARD -->
+
+        <div class="level2IntroCard">
+
+
+            <div class="jungleBadge">
+                🌿 LEVEL 2 🌿
+            </div>
+
+
+            <div class="jungleIcon">
+                🐾
+            </div>
+
+
+            <h2>
+                Into the Wild... 🌱
+            </h2>
+
+
+            <p class="jungleIntroText">
+                You survived the first round...
+            </p>
+
+
+            <p class="jungleIntroText">
+                Now let's see where this little
+                adventure takes you. 🦋
+            </p>
+
+
+            <p class="jungleReadyText">
+                Are you ready? 👀
+            </p>
+
+
+            <button id="enterLevel2">
+                Enter the Jungle →
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- =================================================
+     LEVEL 2 — QUESTION 1
+     FIRST MEET — CALENDAR
+     ================================================= -->
+
+<div id="level2Q1Card" style="display: none;">
+
+    <div class="level2QuestionDecor" aria-hidden="true">
+        <span>🌿</span>
+        <span>🍃</span>
+        <span>🦋</span>
+        <span>🐾</span>
+        <span>🌸</span>
+    </div>
+
+    <div class="level2QuestionBadge">
+        🌿 LEVEL 2 🌿
+    </div>
+
+    <p class="level2QuestionNumber">
+        Question 1
+    </p>
+
+    <h2 class="level2QuestionText">
+        When did we first meet in Ahmedabad? 👀
+    </h2>
+
+    <p class="level2QuestionHint">
+        Choose the date you remember... 📅
+    </p>
+
+
+    <!-- CALENDAR -->
+
+    <div class="calendarBox">
+
+        <div class="calendarHeader">
+
+            <button id="calendarPrev"
+                    type="button">
+                ‹
+            </button>
+
+            <h3 id="calendarMonth">
+                December 2024
+            </h3>
+
+            <button id="calendarNext"
+                    type="button">
+                ›
+            </button>
+
+        </div>
+
+        <div id="calendarDays"
+             class="calendarDays">
+        </div>
+
+    </div>
+
+
+    <p id="calendarSelected">
+        Select a date 📅
+    </p>
+
+
+    <button id="calendarSubmit"
+            disabled>
+        Confirm Date →
+    </button>
+
+
+    <!-- RESULT OF THIS QUESTION -->
+
+    <div id="level2Q1Reaction"
+         style="display: none;">
+
+        <div id="level2Q1ReactionText"></div>
+
+        <div class="level2RetryButtons">
+
+            <button id="level2Q1TryAgain"
+                    style="display: none;">
+                Try Again 🔄
+            </button>
+
+            <button id="level2Q1Next"
+                    style="display: none;">
+                Next Question →
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =================================================
+     LEVEL 2 — QUESTION 2
+     FIRST KISS — CALENDAR
+     ================================================= -->
+
+<div id="level2Q2Card" style="display: none;">
+
+    <div class="level2QuestionDecor" aria-hidden="true">
+        <span>🌿</span>
+        <span>🍃</span>
+        <span>🦋</span>
+        <span>🐾</span>
+        <span>🌸</span>
+    </div>
+
+    <div class="level2QuestionBadge">
+        🌿 LEVEL 2 🌿
+    </div>
+
+    <p class="level2QuestionNumber">
+        Question 2
+    </p>
+
+    <h2 class="level2QuestionText">
+        When was our first kiss? 💋
+    </h2>
+
+    <p class="level2QuestionHint">
+        Choose the date you remember... 📅
+    </p>
+
+
+    <!-- CALENDAR -->
+
+    <div class="calendarBox">
+
+        <div class="calendarHeader">
+
+            <button id="calendarQ2Prev"
+                    type="button">
+                ‹
+            </button>
+
+            <h3 id="calendarQ2Month">
+                August 2026
+            </h3>
+
+            <button id="calendarQ2Next"
+                    type="button">
+                ›
+            </button>
+
+        </div>
+
+
+        <div class="calendarWeekdays">
+
+            <span>Sun</span>
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+
+        </div>
+
+
+        <div id="calendarQ2Days"
+             class="calendarDays">
+        </div>
+
+    </div>
+
+
+    <p id="calendarQ2Selected">
+        Select a date 📅
+    </p>
+
+
+    <button id="calendarQ2Submit"
+            disabled>
+        Confirm Date →
+    </button>
+
+
+    <!-- RESULT -->
+
+    <div id="level2Q2Reaction"
+         style="display: none;">
+
+        <div id="level2Q2ReactionText"></div>
+
+        <div class="level2RetryButtons">
+
+            <button id="level2Q2TryAgain"
+                    style="display: none;">
+                Try Again 🔄
+            </button>
+
+            <button id="level2Q2Next"
+                    style="display: none;">
+                Next Question →
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =================================================
+     LEVEL 2 — QUESTION 3
+     FIRST IMPRESSION — TEXT ANSWER
+     ================================================= -->
+
+<div id="level2Q3Card" style="display: none;">
+
+    <!-- JUNGLE DECORATION -->
+
+    <div class="level2QuestionDecor" aria-hidden="true">
+
+        <span>🌿</span>
+        <span>🍃</span>
+        <span>🦋</span>
+        <span>🐾</span>
+        <span>🌸</span>
+
+    </div>
+
+
+    <!-- BADGE -->
+
+    <div class="level2QuestionBadge">
+        🌿 LEVEL 2 🌿
+    </div>
+
+
+    <!-- QUESTION NUMBER -->
+
+    <p class="level2QuestionNumber">
+        Question 3
+    </p>
+
+
+    <!-- QUESTION -->
+
+    <h2 class="level2QuestionText">
+        What’s one thing you noticed about me immediately? 👀
+    </h2>
+
+
+    <!-- HINT -->
+
+    <p class="level2QuestionHint">
+        Be honest... I want to know what caught your attention first. 🌿
+    </p>
+
+
+    <!-- ANSWER BOX -->
+
+    <div class="q3AnswerBox">
+
+        <textarea
+            id="level2Q3Answer"
+            placeholder="Write your answer here... ✍️"
+            maxlength="300">
+        </textarea>
+
+        <div class="q3CharacterCount">
+            <span id="q3CharCount">0</span>/300
+        </div>
+
+    </div>
+
+
+    <!-- SUBMIT -->
+
+    <button id="level2Q3Submit"
+            type="button"
+            disabled>
+
+        Submit Answer →
+
+    </button>
+
+
+    <!-- RESULT -->
+
+    <div id="level2Q3Reaction"
+         style="display: none;">
+
+        <div id="level2Q3ReactionText"></div>
+
+
+        <!-- ONLY NEXT QUESTION -->
+        <div class="level2NextButtonContainer">
+
+            <button id="level2Q3Next"
+                    type="button">
+
+                Next Question →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+     LEVEL 2 — QUESTION 4
+     WHAT WOULD YOU MISS MOST?
+     ===================================================== -->
+
+<section id="level2Q4Card" class="level2-question-card">
+
+    <div class="questionNumber">
+        QUESTION 4
+    </div>
+
+    <h2 class="questionTitle">
+        If we broke up tomorrow, what would you miss most?
+    </h2>
+
+    <p class="questionSubtitle">
+        Be honest... there's no wrong answer. 🥺
+    </p>
+
+    <textarea
+        id="q4Answer"
+        class="q3Answer"
+        maxlength="800"
+        placeholder="Tell me what you'd miss most..."
+    ></textarea>
+
+    <div class="characterCount">
+        <span id="q4CharacterCount">0</span>/800
+    </div>
+
+    <button
+        id="q4Submit"
+        class="calendarSubmit"
+        type="button"
+    >
+        Submit Answer 💌
+    </button>
+
+</section>
+
+<!-- =================================================
+     LEVEL 2 — QUESTION 4
+     BREAKUP — TEXT ANSWER
+     ================================================= -->
+
+<div id="level2Q4Card" style="display: none;">
+
+
+    <!-- JUNGLE DECORATION -->
+
+    <div class="level2QuestionDecor" aria-hidden="true">
+
+        <span>🌿</span>
+        <span>🍃</span>
+        <span>🦋</span>
+        <span>🐾</span>
+        <span>🌸</span>
+
+    </div>
+
+
+    <!-- BADGE -->
+
+    <div class="level2QuestionBadge">
+        🌿 LEVEL 2 🌿
+    </div>
+
+
+    <!-- QUESTION NUMBER -->
+
+    <p class="level2QuestionNumber">
+        Question 4
+    </p>
+
+
+    <!-- QUESTION -->
+
+    <h2 class="level2QuestionText">
+        If we broke up tomorrow, what would you miss most? 💔
+    </h2>
+
+
+    <!-- HINT -->
+
+    <p class="level2QuestionHint">
+        Don't think too much... just tell me what you'd miss the most. 🌿
+    </p>
+
+
+    <!-- ANSWER BOX -->
+
+    <div class="q3AnswerBox">
+
+        <textarea
+            id="level2Q4Answer"
+            placeholder="Write your answer here... ✍️"
+            maxlength="800">
+        </textarea>
+
+
+        <div class="q3CharacterCount">
+
+            <span id="q4CharCount">
+                0
+            </span>/800
+
+        </div>
+
+    </div>
+
+
+    <!-- SUBMIT -->
+
+    <button id="level2Q4Submit"
+            type="button"
+            disabled>
+
+        Submit Answer →
+
+    </button>
+
+
+    <!-- RESULT -->
+
+    <div id="level2Q4Reaction"
+         style="display: none;">
+
+
+        <div id="level2Q4ReactionText"></div>
+
+
+        <!-- NEXT QUESTION -->
+
+        <div class="level2NextButtonContainer">
+
+            <button id="level2Q4Next"
+                    type="button">
+
+                Next Question →
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+    <!-- =================================================
+         LEVEL 1 — QUESTION CARD
+         Q1 → Q5 ARE CONTROLLED BY JAVASCRIPT
+         ================================================= -->
+
+    <div id="level1Card">
+
+
+        <!-- DARK FANTASY DECORATION -->
+
+        <div class="fantasyDecor"
+             aria-hidden="true">
+
+
+            <span class="fantasyMoon">
+                ☾
+            </span>
+
+
+            <span class="fantasyStar star1">
+                ✦
+            </span>
+
+
+            <span class="fantasyStar star2">
+                ✧
+            </span>
+
+
+            <span class="fantasyStar star3">
+                ⋆
+            </span>
+
+
+            <span class="fantasyStar star4">
+                ✦
+            </span>
+
+
+            <span class="fantasyRose rose1">
+                ❀
+            </span>
+
+
+            <span class="fantasyRose rose2">
+                ❀
+            </span>
+
+
+            <span class="fantasyVine vineLeft">
+                ❧
+            </span>
+
+
+            <span class="fantasyVine vineRight">
+                ❧
+            </span>
+
+
+        </div>
+
+
+
+        <!-- LEVEL BADGE -->
+
+        <div class="levelBadge">
+            LEVEL 1
+        </div>
+
+
+
+        <!-- QUESTION HINT -->
+
+        <div class="questionHint">
+            Answer within 10 seconds ✦
+        </div>
+
+
+
+        <!-- QUESTION NUMBER -->
+
+        <div class="questionNumber">
+
+            Question
+
+            <span id="currentQuestion">
+                1
+            </span>
+
+            / 5
+
+        </div>
+
+
+
+        <!-- QUESTION -->
+
+        <div class="questionText">
+            If I have a free day, what will I do?
+        </div>
+
+
+
+        <!-- TIMER -->
+
+        <div class="timer">
+
+            <span id="timerCount">
+                10
+            </span>
+
+            s
+
+        </div>
+
+
+
+        <!-- =================================================
+             OPTIONS
+             ================================================= -->
+
+        <div class="optionsGrid">
+
+
+            <!-- OPTION A -->
+
+            <button class="option"
+                    data-answer="A">
+
+                <img src="q1-sleeping.jpg"
+                     alt="Person sleeping comfortably">
+
+                <span>
+                    A
+                </span>
+
+            </button>
+
+
+
+            <!-- OPTION B -->
+
+            <button class="option"
+                    data-answer="B">
+
+                <img src="q1-gaming.jpg"
+                     alt="Person playing video games">
+
+                <span>
+                    B
+                </span>
+
+            </button>
+
+
+
+            <!-- OPTION C -->
+
+            <button class="option"
+                    data-answer="C">
+
+                <img src="q1-roadtrip.jpg"
+                     alt="Person going on a road trip">
+
+                <span>
+                    C
+                </span>
+
+            </button>
+
+
+
+            <!-- OPTION D -->
+
+            <button class="option"
+                    data-answer="D">
+
+                <img src="q1-drawing.jpg"
+                     alt="Person drawing or painting">
+
+                <span>
+                    D
+                </span>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- SUBMIT BUTTON -->
+
+        <button id="submitAnswer"
+                disabled>
+
+            Submit Answer
+
+        </button>
+
+
+
+        <!-- SHOW OPTIONS BUTTON -->
+
+        <button id="showOptions">
+
+            Choose your answer →
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         FINAL RESULT CARD
+         SHOWN AFTER QUESTION 5
+         ================================================= -->
+
+    <div id="resultCard"
+         class="resultCard">
+
+
+        <div class="resultDecor">
+            ✦
+        </div>
+
+
+        <div class="resultMoon">
+            🌙
+        </div>
+
+
+
+        <div class="resultContent">
+
+
+            <p class="resultSmallTitle">
+                ✦ YOUR JOURNEY ENDS HERE ✦
+            </p>
+
+
+
+            <h2>
+                Here's Your Result 💌
+            </h2>
+
+
+
+            <p class="resultSubtitle">
+                So... how well do you really know me? 👀
+            </p>
+
+
+
+            <div class="scoreCircle">
+
+
+                <span id="finalScore">
+                    0
+                </span>
+
+
+                <small>
+                    / 50
+                </small>
+
+
+            </div>
+
+
+
+            <h3 id="resultTitle">
+                Let's see...
+            </h3>
+
+
+
+            <p id="resultMessage">
+                Calculating how well you know me...
+            </p>
+
+
+
+            <div class="resultBar">
+
+                <div id="resultBarFill"
+                     class="resultBarFill">
+                </div>
+
+            </div>
+
+
+
+            <p id="resultPercentage">
+                0%
+            </p>
+
+
+
+            <p class="resultEnding">
+
+                And maybe... there's still a lot more
+                to discover about me. 🌙✨
+
+            </p>
+
+            <button id="nextLevelButton">
+    Next Level 🌿 →
+</button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         ANSWER REACTION SCREEN
+         ================================================= -->
+
+    <div id="answerReaction">
+
+
+        <!-- DARK FANTASY DECORATION -->
+
+        <div class="fantasyDecor"
+             aria-hidden="true">
+
+
+            <span class="fantasyMoon">
+                ☾
+            </span>
+
+
+            <span class="fantasyStar star1">
+                ✦
+            </span>
+
+
+            <span class="fantasyStar star2">
+                ✧
+            </span>
+
+
+            <span class="fantasyStar star3">
+                ⋆
+            </span>
+
+
+            <span class="fantasyStar star4">
+                ✦
+            </span>
+
+
+        </div>
+
+
+
+        <!-- REACTION VISUAL -->
+
+        <div id="reactionVisual"></div>
+
+
+
+        <!-- REACTION TEXT -->
+
+        <div id="reactionText"></div>
+
+
+
+        <!-- NEXT QUESTION -->
+
+        <button id="nextQuestionBtn"
+                style="display: none;">
+
+            Next Question →
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =================================================
+     DREAMY ATMOSPHERE
+     ================================================= -->
+
+<div id="atmosphere"></div>
+
+
+
+<div class="sparkles">
+
+    ✦　✧　✦
+
+</div>
+
+
+
+<!-- =================================================
+     MAIN INTRO
+     ================================================= -->
+
+<main id="mainContent">
+
+
+    <h1 id="heading">
+        Hiieee... 👀
+    </h1>
+
+
+
+    <p id="introText">
+        Something special is waiting for you...
+    </p>
+
+
+
+    <button id="enterButton">
+        Enter 👀
+    </button>
+
+
+
+    <div id="next"></div>
+
+
+
+    <p id="curious">
+        But... you have to be curious enough to continue. 👀
+    </p>
+
+
+</main>
+
+
+
+<!-- =================================================
+     BIRTHDAY REVEAL
+     ================================================= -->
+
+<div id="birthdayReveal">
+
+
+    <h2>
+
+        😽🤍😁
+
+        <span>
+
+            Wishing you many many many happy returns
+            of the day...Piyudiii
+
+        </span>
+
+        🥹🙈😛
+
+    </h2>
+
+
+
+    <p>
+
+        🎉🍫✨ Happy Happy Happy Happy Happy vala
+        Happiieessttt Birthday Diklii...!! 🥳💖🎈
+
+    </p>
+
+
+
+    <div class="birthday-cake">
+        🎂
+    </div>
+
+
+
+    <!-- BIRTHDAY MUSIC -->
+
+    <audio id="birthdaySong"
+           loop>
+
+        <source src="birthday-song.mp3"
+                type="audio/mpeg">
+
+    </audio>
+
+
+
+    <!-- GAME MUSIC -->
+
+    <audio id="loveSong">
+
+        <source src="love-me-like-you-do.mp3"
+                type="audio/mpeg">
+
+    </audio>
+
+
+
+    <button id="birthdayStart">
+
+        Let the celebration begin ✨
+
+    </button>
+
+
+
+    <p>
+        Today is all about you... ❤️
+    </p>
+
+
+</div>
+```
+
+</body>
+
+</html>

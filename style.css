@@ -4425,7 +4425,7 @@ body.chapter-birthday {
 
 #reactionVisual::after {
 
-    content: "🥰  🥹";
+    content: "";
 
     position: absolute;
 
@@ -7170,14 +7170,14 @@ body.chapter-birthday {
 
 #level2Q3Reaction {
     width: min(600px, 90%);
-
     margin: 5px auto 30px;
-
     text-align: center;
-
     position: relative;
-
     z-index: 50;
+
+    max-height: 75vh;
+    overflow-y: auto;
+    padding-bottom: 30px;
 }
 
 
@@ -7261,6 +7261,2049 @@ body.chapter-birthday {
         width: min(260px, 85%);
     }
 
+}
+
+/* ==========================================
+   LEVEL 2 TEXT QUESTIONS (Q3 + Q4)
+   ========================================== */
+
+#level2Q3Card,
+#level2Q4Card {
+    width: min(90%, 850px);
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 28px;
+
+    background:
+        rgba(20, 35, 25, 0.82);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid
+        rgba(160, 220, 170, 0.18);
+
+    box-shadow:
+        0 0 40px rgba(0,0,0,0.35),
+        0 0 60px rgba(80,180,100,0.12);
+
+    position: relative;
+    overflow: hidden;
+
+    color: #f8fff8;
+}
+
+
+/* BADGE */
+
+.level2QuestionBadge {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(120,255,170,0.12);
+
+    border:
+        1px solid rgba(120,255,170,0.25);
+
+    color: #c8ffd9;
+
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+
+    margin-bottom: 16px;
+}
+
+
+/* QUESTION NUMBER */
+
+.level2QuestionNumber {
+    color: #9ed6aa;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+
+/* TITLE */
+
+.level2QuestionText {
+    font-size: clamp(1.8rem,4vw,2.7rem);
+    line-height: 1.3;
+    margin-bottom: 16px;
+
+    color: white;
+}
+
+
+/* HINT */
+
+.level2QuestionHint {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+
+
+/* ANSWER BOX */
+
+.q3AnswerBox {
+    position: relative;
+}
+
+
+.q3AnswerBox textarea {
+    width: 100%;
+    min-height: 220px;
+
+    resize: vertical;
+
+    padding: 18px;
+
+    border-radius: 18px;
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+    background:
+        rgba(255,255,255,0.06);
+
+    color: white;
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+
+.q3AnswerBox textarea:focus {
+    border-color: #86ffb1;
+
+    box-shadow:
+        0 0 18px rgba(134,255,177,0.25);
+}
+
+
+.q3AnswerBox textarea::placeholder {
+    color: rgba(255,255,255,0.4);
+}
+
+
+/* CHARACTER COUNTER */
+
+.q3CharacterCount {
+    text-align: right;
+
+    margin-top: 10px;
+
+    color: rgba(255,255,255,0.55);
+
+    font-size: 0.9rem;
+}
+
+
+/* SUBMIT BUTTON */
+
+#level2Q3Submit,
+#level2Q4Submit,
+#level2Q3Next,
+#level2Q4Next {
+    margin-top: 22px;
+
+    padding: 14px 28px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    color: #102010;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8ff7b0,
+            #b8ffd0
+        );
+
+    transition: 0.3s ease;
+}
+
+
+#level2Q3Submit:hover,
+#level2Q4Submit:hover,
+#level2Q3Next:hover,
+#level2Q4Next:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px
+        rgba(143,247,176,0.25);
+}
+
+
+#level2Q3Submit:disabled,
+#level2Q4Submit:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+
+/* REACTION BOX */
+
+#level2Q3Reaction,
+#level2Q4Reaction {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,0.05);
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+}
+
+
+/* DECOR FLOATING */
+
+.level2QuestionDecor span {
+    position: absolute;
+
+    opacity: 0.18;
+
+    font-size: 1.5rem;
+
+    animation:
+        jungleFloat 6s ease-in-out infinite;
+}
+
+
+@keyframes jungleFloat {
+
+    0%,100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-10px);
+    }
+
+}
+
+#level2Q3Reaction {
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+    padding-bottom: 100px !important;
+}
+
+#level2Q3Card {
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+}
+
+#level2Q3Next {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-top: 25px !important;
+    position: relative !important;
+    z-index: 9999 !important;
+}
+
+/* =====================================================
+   LEVEL 2 Q3 + Q4 — LIGHT JUNGLE THEME
+   ===================================================== */
+
+#level2Q3Card,
+#level2Q4Card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(248, 255, 244, 0.97),
+            rgba(235, 248, 228, 0.97)
+        );
+
+    border: 1px solid rgba(92, 125, 76, 0.25);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 50px rgba(54, 82, 48, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+    color: #40533a;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Jungle badge */
+
+#level2Q3Card .level2QuestionBadge,
+#level2Q4Card .level2QuestionBadge {
+
+    background:
+        linear-gradient(
+            135deg,
+            #739b61,
+            #557e48
+        );
+
+    color: white;
+
+    box-shadow:
+        0 6px 18px rgba(74, 108, 62, 0.22);
+}
+
+
+/* Question number */
+
+#level2Q3Card .level2QuestionNumber,
+#level2Q4Card .level2QuestionNumber {
+
+    color: #6b875f;
+
+}
+
+
+/* Question heading */
+
+#level2Q3Card .level2QuestionText,
+#level2Q4Card .level2QuestionText {
+
+    color: #40533a;
+
+}
+
+
+/* Hint */
+
+#level2Q3Card .level2QuestionHint,
+#level2Q4Card .level2QuestionHint {
+
+    color: #71856a;
+
+}
+
+
+/* =====================================================
+   Q3 + Q4 TEXTBOX
+   ===================================================== */
+
+#level2Q3Card textarea,
+#level2Q4Card textarea {
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border: 1px solid rgba(92, 125, 76, 0.28);
+
+    color: #40533a;
+
+    border-radius: 18px;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+#level2Q3Card textarea:focus,
+#level2Q4Card textarea:focus {
+
+    background: white;
+
+    border-color: #739b61;
+
+    box-shadow:
+        0 0 0 4px rgba(115, 155, 97, 0.12);
+}
+
+
+/* Placeholder */
+
+#level2Q3Card textarea::placeholder,
+#level2Q4Card textarea::placeholder {
+
+    color: rgba(75, 95, 70, 0.48);
+
+}
+
+
+/* Character count */
+
+#level2Q3Card .q3CharacterCount,
+#level2Q4Card .q3CharacterCount {
+
+    color: #78906f;
+
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+   ===================================================== */
+
+#level2Q3Submit,
+#level2Q4Submit {
+
+    background:
+        linear-gradient(
+            135deg,
+            #739b61,
+            #557e48
+        );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 8px 20px rgba(70, 105, 58, 0.2);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+#level2Q3Submit:hover:not(:disabled),
+#level2Q4Submit:hover:not(:disabled) {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(70, 105, 58, 0.28);
+}
+
+
+/* =====================================================
+   Q3 + Q4 NEXT QUESTION BUTTON
+   VISIBILITY + HOVER FIX
+   ===================================================== */
+
+#level2Q3Next,
+#level2Q4Next {
+
+    display: inline-block !important;
+
+    position: relative;
+
+    z-index: 50;
+
+    background:
+        linear-gradient(
+            135deg,
+            #739b61,
+            #557e48
+        );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 25px;
+
+    padding: 12px 25px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    pointer-events: auto !important;
+
+    box-shadow:
+        0 8px 20px rgba(70, 105, 58, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+/* HOVER */
+
+#level2Q3Next:hover,
+#level2Q4Next:hover {
+
+    transform: translateY(-3px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 12px 28px rgba(70, 105, 58, 0.35);
+}
+
+
+/* CLICK */
+
+#level2Q3Next:active,
+#level2Q4Next:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =====================================================
+   NEXT BUTTON CONTAINER
+   ===================================================== */
+
+#level2Q3Card .level2NextButtonContainer,
+#level2Q4Card .level2NextButtonContainer {
+
+    position: relative;
+
+    z-index: 40;
+
+    margin-top: 20px;
+
+    text-align: center;
+
+}
+
+/* =====================================================
+   LEVEL 2 Q3 + Q4 — RESPONSIVE LIGHT JUNGLE CARDS
+   ===================================================== */
+
+#level2Q3Card,
+#level2Q4Card {
+
+    width: min(92vw, 720px);
+
+    min-height: auto;
+    height: auto;
+
+    max-height: none;
+
+    margin: 30px auto;
+
+    padding: clamp(22px, 4vw, 40px);
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(248, 255, 244, 0.98),
+            rgba(235, 248, 228, 0.98)
+        );
+
+    border: 1px solid rgba(92, 125, 76, 0.25);
+
+    border-radius: clamp(20px, 4vw, 30px);
+
+    box-shadow:
+        0 15px 40px rgba(54, 82, 48, 0.16);
+
+    color: #40533a;
+
+    position: relative;
+
+    overflow: visible;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   Q3 + Q4 CONTENT
+   ===================================================== */
+
+#level2Q3Card .level2QuestionText,
+#level2Q4Card .level2QuestionText {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    line-height: 1.4;
+
+    font-size: clamp(20px, 3vw, 28px);
+
+    word-wrap: break-word;
+
+}
+
+
+#level2Q3Card .level2QuestionHint,
+#level2Q4Card .level2QuestionHint {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    line-height: 1.6;
+
+    font-size: clamp(13px, 2vw, 16px);
+
+}
+
+
+/* =====================================================
+   TEXT BOX
+   ===================================================== */
+
+#level2Q3Card .q3AnswerBox,
+#level2Q4Card .q3AnswerBox {
+
+    width: 100%;
+
+    max-width: 620px;
+
+    margin: 20px auto;
+
+    box-sizing: border-box;
+
+}
+
+
+#level2Q3Card textarea,
+#level2Q4Card textarea {
+
+    width: 100%;
+
+    min-height: 140px;
+
+    max-height: 350px;
+
+    resize: vertical;
+
+    box-sizing: border-box;
+
+    padding: 16px;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(92, 125, 76, 0.28);
+
+    background: rgba(255, 255, 255, 0.85);
+
+    color: #40533a;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    outline: none;
+
+}
+
+
+#level2Q3Card textarea:focus,
+#level2Q4Card textarea:focus {
+
+    border-color: #739b61;
+
+    box-shadow:
+        0 0 0 4px rgba(115, 155, 97, 0.12);
+
+}
+
+
+/* =====================================================
+   CHARACTER COUNT
+   ===================================================== */
+
+#level2Q3Card .q3CharacterCount,
+#level2Q4Card .q3CharacterCount {
+
+    text-align: right;
+
+    margin-top: 5px;
+
+    padding-right: 5px;
+
+    color: #78906f;
+
+    font-size: 12px;
+
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+   ===================================================== */
+
+#level2Q3Submit,
+#level2Q4Submit {
+
+    display: block;
+
+    width: fit-content;
+
+    max-width: 90%;
+
+    margin: 18px auto;
+
+    padding: 12px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #739b61,
+            #557e48
+        );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+#level2Q3Submit:hover:not(:disabled),
+#level2Q4Submit:hover:not(:disabled) {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(70, 105, 58, 0.28);
+
+}
+
+
+/* =====================================================
+   NEXT QUESTION
+   ===================================================== */
+
+#level2Q3Card .level2NextButtonContainer,
+#level2Q4Card .level2NextButtonContainer {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+    padding-bottom: 5px;
+
+    position: relative;
+
+    z-index: 20;
+
+}
+
+
+#level2Q3Next,
+#level2Q4Next {
+
+    width: auto;
+
+    max-width: 90%;
+
+    padding: 12px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #739b61,
+            #557e48
+        );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    position: relative;
+
+    z-index: 50;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+
+}
+
+
+#level2Q3Next:hover,
+#level2Q4Next:hover {
+
+    transform: translateY(-3px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 10px 25px rgba(70, 105, 58, 0.3);
+
+}
+
+
+#level2Q3Next:active,
+#level2Q4Next:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =====================================================
+   MOBILE VIEW
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    #level2Q3Card,
+    #level2Q4Card {
+
+        width: calc(100vw - 28px);
+
+        margin: 18px auto;
+
+        padding: 20px 16px;
+
+        border-radius: 20px;
+
+    }
+
+
+    #level2Q3Card .level2QuestionText,
+    #level2Q4Card .level2QuestionText {
+
+        font-size: 20px;
+
+        line-height: 1.35;
+
+    }
+
+
+    #level2Q3Card .level2QuestionHint,
+    #level2Q4Card .level2QuestionHint {
+
+        font-size: 13px;
+
+        line-height: 1.5;
+
+    }
+
+
+    #level2Q3Card textarea,
+    #level2Q4Card textarea {
+
+        min-height: 130px;
+
+        font-size: 14px;
+
+        padding: 13px;
+
+    }
+
+
+    #level2Q3Submit,
+    #level2Q4Submit,
+    #level2Q3Next,
+    #level2Q4Next {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 12px 18px;
+
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    #level2Q3Card,
+    #level2Q4Card {
+
+        width: calc(100vw - 20px);
+
+        padding: 17px 13px;
+
+    }
+
+
+    #level2Q3Card .level2QuestionText,
+    #level2Q4Card .level2QuestionText {
+
+        font-size: 18px;
+
+    }
+
+
+    #level2Q3Card textarea,
+    #level2Q4Card textarea {
+
+        min-height: 115px;
+
+    }
+
+}
+
+/* =================================================
+   LEVEL 2 Q4 — NEXT QUESTION BUTTON
+   ================================================= */
+
+#level2Q4Next {
+    display: block;
+    width: min(90%, 280px);
+    margin: 22px auto 10px;
+
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #739b61,
+        #557e48
+    );
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 15px rgba(70, 100, 55, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* HOVER */
+
+#level2Q4Next:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    background: linear-gradient(
+        135deg,
+        #83ad70,
+        #638f54
+    );
+
+    box-shadow:
+        0 10px 22px rgba(70, 100, 55, 0.35);
+}
+
+
+/* CLICK */
+
+#level2Q4Next:active {
+    transform: translateY(0) scale(0.98);
+}
+
+
+/* =================================================
+   MOBILE
+   ================================================= */
+
+@media (max-width: 600px) {
+
+    #level2Q4Next {
+        width: 85%;
+        max-width: 260px;
+
+        padding: 11px 20px;
+
+        font-size: 13px;
+
+        margin-top: 18px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    #level2Q4Card {
+        width: 94%;
+        min-height: auto;
+        height: auto;
+
+        padding: 25px 16px;
+        margin: 15px auto;
+    }
+
+}
+
+#level2Q4Next {
+    margin: 0.5rem auto 100px;
+}
+
+#level2Q4Card {
+    width: min(92%, 700px);
+    min-height: 500px;
+    height: auto;
+
+    box-sizing: border-box;
+
+    margin: 35px auto;
+    padding: 35px 30px;
+
+    overflow: visible;
+}
+
+@media (max-width: 600px) {
+
+    #level2Q4Card {
+        width: 94%;
+        min-height: auto;
+        height: auto;
+
+        margin: 25px auto;
+        padding: 25px 16px;
+    }
+
+}
+
+#level2Q4Card {
+    width: min(92%, 700px);
+
+    max-height: 85vh;
+    height: auto;
+
+    box-sizing: border-box;
+
+    margin: 30px auto;
+    padding: 30px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: thin;
+}
+
+@media (max-width: 600px) {
+
+    #level2Q4Card {
+        width: 94%;
+
+        max-height: 88vh;
+
+        margin: 20px auto;
+        padding: 24px 16px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+}
+
+#level2Q4Card::-webkit-scrollbar {
+    width: 6px;
+}
+
+#level2Q4Card::-webkit-scrollbar-thumb {
+    background: #739b61;
+    border-radius: 10px;
+}
+
+#level2Q4Card::-webkit-scrollbar-track {
+    background: rgba(115, 155, 97, 0.1);
+}
+
+/* =================================================
+   LEVEL 2 — QUESTION 5
+   FINAL QUESTION
+   ================================================= */
+
+#level2Q5Card {
+    width: min(92%, 700px);
+    max-height: 85vh;
+
+    box-sizing: border-box;
+
+    margin: 30px auto;
+    padding: 35px 30px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(235, 246, 225, 0.97),
+            rgba(213, 232, 199, 0.97)
+        );
+
+    border: 1px solid rgba(115, 155, 97, 0.35);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 50px rgba(55, 80, 45, 0.20);
+
+    text-align: center;
+}
+
+
+/* SCROLLBAR */
+
+#level2Q5Card::-webkit-scrollbar {
+    width: 6px;
+}
+
+#level2Q5Card::-webkit-scrollbar-thumb {
+    background: #739b61;
+    border-radius: 10px;
+}
+
+#level2Q5Card::-webkit-scrollbar-track {
+    background: rgba(115, 155, 97, 0.1);
+}
+
+
+/* =================================================
+   CHOICE BUTTONS
+   ================================================= */
+
+.q5ChoiceContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    margin: 30px auto;
+
+    flex-wrap: wrap;
+}
+
+
+.q5ChoiceButton {
+    width: min(220px, 42vw);
+
+    min-height: 58px;
+
+    padding: 14px 25px;
+
+    border: none;
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* ME */
+
+.q5MeButton {
+    background:
+        linear-gradient(
+            135deg,
+            #739b61,
+            #557e48
+        );
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(70, 100, 55, 0.25);
+}
+
+
+.q5MeButton:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 12px 25px rgba(70, 100, 55, 0.35);
+}
+
+
+/* GOBAR */
+
+.q5GobarButton {
+    background:
+        linear-gradient(
+            135deg,
+            #a98262,
+            #806047
+        );
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(90, 65, 45, 0.20);
+}
+
+
+.q5GobarButton:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 12px 25px rgba(90, 65, 45, 0.30);
+}
+
+
+/* =================================================
+   WRONG ANSWER
+   ================================================= */
+
+.q5WrongReaction {
+    margin: 25px auto 10px;
+
+    padding: 20px;
+
+    width: min(90%, 450px);
+
+    border-radius: 22px;
+
+    background:
+        rgba(255, 235, 230, 0.95);
+
+    border: 1px solid rgba(180, 80, 60, 0.25);
+
+    animation: q5WrongShake 0.5s ease;
+}
+
+
+.angrySnake {
+    font-size: 70px;
+
+    margin-bottom: 5px;
+
+    animation:
+        snakeAngry 0.7s ease-in-out infinite alternate;
+}
+
+
+.q5WrongReaction h3 {
+    margin: 5px 0 8px;
+
+    font-size: 18px;
+
+    color: #9b3f35;
+}
+
+
+.q5WrongReaction p {
+    margin: 6px 0;
+
+    font-size: 14px;
+
+    color: #70453f;
+}
+
+
+.q5WrongSmallText {
+    font-weight: 600;
+}
+
+
+@keyframes snakeAngry {
+
+    from {
+        transform: rotate(-8deg) scale(1);
+    }
+
+    to {
+        transform: rotate(8deg) scale(1.12);
+    }
+
+}
+
+
+@keyframes q5WrongShake {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-8px);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =================================================
+   SECOND QUESTION
+   ================================================= */
+
+.q5SecondQuestion {
+    margin: 25px auto 5px;
+
+    padding: 25px 20px;
+
+    width: min(92%, 500px);
+
+    box-sizing: border-box;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.55);
+
+    border: 1px solid rgba(115, 155, 97, 0.25);
+
+    animation: q5FadeIn 0.6s ease;
+}
+
+
+.q5MiniIcon {
+    font-size: 38px;
+
+    margin-bottom: 5px;
+}
+
+
+.q5SecondQuestion h2 {
+    margin: 8px 0 10px;
+
+    font-size: clamp(19px, 4vw, 25px);
+
+    color: #3e5835;
+}
+
+
+.q5SecondQuestion p {
+    margin: 0 0 22px;
+
+    font-size: 14px;
+
+    color: #60745a;
+}
+
+
+@keyframes q5FadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =================================================
+   YES / NO
+   ================================================= */
+
+.q5YesNoArea {
+    position: relative;
+
+    min-height: 120px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.q5YesButton,
+.q5NoButton {
+    min-width: 120px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.q5YesButton {
+    background:
+        linear-gradient(
+            135deg,
+            #739b61,
+            #557e48
+        );
+
+    color: white;
+
+    box-shadow:
+        0 7px 18px rgba(70, 100, 55, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.q5YesButton:hover {
+    transform: translateY(-3px) scale(1.04);
+
+    box-shadow:
+        0 10px 22px rgba(70, 100, 55, 0.35);
+}
+
+
+/* NO BUTTON */
+
+.q5NoButton {
+    background: #eee8df;
+
+    color: #655b50;
+
+    position: relative;
+
+    transition:
+        left 0.2s ease,
+        top 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =================================================
+   FINAL SURPRISE
+   ================================================= */
+
+.q5FinalSurprise {
+    width: min(92%, 800px);
+
+    box-sizing: border-box;
+
+    margin: 35px auto;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(235, 246, 225, 0.98),
+            rgba(213, 232, 199, 0.98)
+        );
+
+    border: 1px solid rgba(115, 155, 97, 0.3);
+
+    box-shadow:
+        0 25px 60px rgba(55, 80, 45, 0.22);
+
+    animation: q5FinalAppear 0.8s ease;
+}
+
+
+.q5FinalDecor {
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+
+.q5FinalIcon {
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+.q5FinalSmallTitle {
+    margin: 5px 0 12px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #668758;
+}
+
+
+.q5FinalSurprise h2 {
+    margin: 5px 0 12px;
+
+    font-size: clamp(23px, 5vw, 34px);
+
+    color: #405c37;
+}
+
+
+.q5FinalText {
+    margin: 0 auto 25px;
+
+    max-width: 550px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #617259;
+}
+
+
+/* =================================================
+   MEMORY VIDEO
+   ================================================= */
+
+.memoryVideoContainer {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 20px auto;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #111;
+
+    box-shadow:
+        0 15px 35px rgba(40, 50, 35, 0.25);
+}
+
+
+.memoryVideoContainer video {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 75vh;
+
+    object-fit: contain;
+}
+
+
+.q5FinalEnding {
+    margin: 25px auto 0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #65755f;
+}
+
+
+@keyframes q5FinalAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.94) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+
+/* =================================================
+   MOBILE
+   ================================================= */
+
+@media (max-width: 600px) {
+
+    #level2Q5Card {
+        width: 94%;
+
+        max-height: 88vh;
+
+        margin: 20px auto;
+
+        padding: 25px 16px;
+
+        border-radius: 24px;
+    }
+
+
+    .q5ChoiceContainer {
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+
+    .q5ChoiceButton {
+        width: min(85%, 280px);
+
+        font-size: 14px;
+
+        padding: 12px 20px;
+    }
+
+
+    .q5SecondQuestion {
+        width: 96%;
+
+        padding: 22px 14px;
+    }
+
+
+    .q5YesNoArea {
+        min-height: 150px;
+
+        gap: 12px;
+    }
+
+
+    .q5YesButton,
+    .q5NoButton {
+        min-width: 105px;
+
+        padding: 11px 18px;
+
+        font-size: 13px;
+    }
+
+
+    .q5FinalSurprise {
+        width: 94%;
+
+        margin: 25px auto;
+
+        padding: 30px 16px;
+
+        border-radius: 25px;
+    }
+
+
+    .q5FinalIcon {
+        font-size: 48px;
+    }
+
+
+    .memoryVideoContainer {
+        border-radius: 15px;
+    }
+
+}
+
+/* =========================================
+   LEVEL 2 TEXT VISIBILITY FIX
+========================================= */
+
+#level2Q1Card h1,
+#level2Q1Card h2,
+#level2Q1Card h3,
+#level2Q1Card h4,
+#level2Q1Card p,
+#level2Q1Card label,
+
+#level2Q2Card h1,
+#level2Q2Card h2,
+#level2Q2Card h3,
+#level2Q2Card h4,
+#level2Q2Card p,
+#level2Q2Card label,
+
+#level2Q3Card h1,
+#level2Q3Card h2,
+#level2Q3Card h3,
+#level2Q3Card h4,
+#level2Q3Card p,
+#level2Q3Card label,
+
+#level2Q4Card h1,
+#level2Q4Card h2,
+#level2Q4Card h3,
+#level2Q4Card h4,
+#level2Q4Card p,
+#level2Q4Card label,
+
+#level2Q5Card h1,
+#level2Q5Card h2,
+#level2Q5Card h3,
+#level2Q5Card h4,
+#level2Q5Card p,
+#level2Q5Card label {
+    color: #3b2a33 !important;
+}
+
+/* Textareas */
+#level2Q3Answer,
+#level2Q4Answer {
+    color: #3b2a33 !important;
+}
+
+/* Placeholders */
+#level2Q3Answer::placeholder,
+#level2Q4Answer::placeholder {
+    color: rgba(59, 42, 51, 0.6) !important;
+}
+
+/* FINAL SURPRISE CARD */
+
+.surpriseCard {
+
+    max-width: 700px;
+
+    margin: 40px auto;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.9);
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+
+    animation: fadeUp 0.8s ease;
+}
+
+.surpriseCard h2 {
+
+    color: #5d4352;
+
+    margin-bottom: 15px;
+}
+
+.surpriseCard p {
+
+    color: #4a3641;
+
+    font-size: 17px;
+
+    margin-bottom: 12px;
+}
+
+.surpriseVideo {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    border-radius: 18px;
+
+    margin-top: 20px;
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+.q5MemoryVideo {
+    position: relative;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 35px auto 0;
+
+    padding: 6px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7eb3,
+            #ffb347,
+            #7afcff,
+            #b388ff,
+            #ff7eb3
+        );
+
+    background-size: 400% 400%;
+
+    animation: borderFlow 8s ease infinite;
+
+    box-shadow:
+        0 0 25px rgba(255,126,179,.45),
+        0 0 50px rgba(179,136,255,.25);
+
+    overflow: hidden;
+}
+
+.q5MemoryVideo::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -40%;
+
+    background:
+        conic-gradient(
+            from 0deg,
+            transparent,
+            rgba(255,255,255,.8),
+            transparent
+        );
+
+    animation: shineSpin 4s linear infinite;
+
+    pointer-events: none;
+}
+
+.q5MemoryVideo video {
+    display: block;
+
+    width: 100%;
+
+    border-radius: 22px;
+
+    position: relative;
+
+    z-index: 2;
+
+    background: #000;
+}
+
+@keyframes borderFlow {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+@keyframes shineSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+.q5MemoryVideo {
+    position: relative;
+
+    width: min(90vw, 500px);
+
+    margin: 25px auto;
+
+    padding: 5px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7eb3,
+            #ffb347,
+            #7afcff,
+            #b388ff,
+            #ff7eb3
+        );
+
+    background-size: 400% 400%;
+
+    animation: borderFlow 8s ease infinite;
+
+    overflow: hidden;
+}
+
+.q5MemoryVideo video {
+    display: block;
+
+    width: 100%;
+
+    max-height: 75vh;
+
+    object-fit: contain;
+
+    border-radius: 22px;
+
+    background: #000;
+}
+
+.q5MemoryVideo video {
+    width: auto;
+
+    max-width: 100%;
+
+    max-height: 80vh;
+
+    object-fit: contain;
+
+    border-radius: 22px;
+
+    display: block;
+
+    margin: auto;
+}
+
+/* =========================================
+   RESPONSIVE FIXES
+   ========================================= */
+
+/* Level 2 - Question 1 center alignment */
+#level2Q1,
+#level2Q1 .question-card,
+#level2Q1 .calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Level 1 - Q1 & Q2: keep submit buttons visible */
+@media (max-height: 800px) {
+
+    #questionCard,
+    #questionCard2 {
+        max-height: 90vh;
+        overflow-y: auto;
+        padding-bottom: 30px;
+    }
+
+    #questionCard button,
+    #questionCard2 button {
+        margin-bottom: 15px;
+    }
+}
+
+/* Smaller/minimized browser window */
+@media (max-width: 900px), (max-height: 650px) {
+
+    #questionCard,
+    #questionCard2 {
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    #questionCard::-webkit-scrollbar,
+    #questionCard2::-webkit-scrollbar {
+        width: 6px;
+    }
+}
+
+/* Level 2 Q1 wrong-answer message */
+#level2Q1 .wrong-reaction,
+#level2Q1 #q1WrongReaction {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Center Level 2 wrong-answer reaction */
+.level2WrongReaction {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+.level2WrongReaction h3,
+.level2WrongReaction p {
+    width: 100% !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 /* =====================================================
    END

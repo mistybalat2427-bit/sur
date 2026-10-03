@@ -44,6 +44,9 @@ const gameStars =
 const gameAtmosphere =
     document.querySelector("#gameAtmosphere");
 
+const memoryVideo =
+    document.querySelector("#memoryVideo");
+
 
 // =====================================================
 // ATMOSPHERE THEMES
@@ -389,33 +392,23 @@ function changeBackground(chapter) {
     switch (chapter) {
 
         case "chapter-one":
-
             createAtmosphere("chapterOne");
-
             break;
 
         case "chapter-two":
-
             createAtmosphere("chapterTwo");
-
             break;
 
         case "chapter-three":
-
             createAtmosphere("chapterThree");
-
             break;
 
         case "chapter-four":
-
             createAtmosphere("chapterFour");
-
             break;
 
         case "chapter-birthday":
-
             createAtmosphere("birthday");
-
             break;
     }
 }
@@ -426,8 +419,6 @@ function changeBackground(chapter) {
 // =====================================================
 
 changeBackground("chapter-one");
-
-
 
 
 // =====================================================
@@ -443,7 +434,7 @@ if (enterButton) {
             changeBackground("chapter-two");
 
             heading.textContent =
-                "Oh... you clicked it 👀";
+                "Ohhoo... bau utaval... 😂";
 
             curiousLine.style.display =
                 "none";
@@ -456,7 +447,7 @@ if (enterButton) {
 
             next.innerHTML = `
                 <p>
-                    There is more... but you'll have to find it. 🌙
+                    Haji to bau 6 betuuu... but you'll have to find it...🧐😝
                 </p>
             `;
 
@@ -468,7 +459,7 @@ if (enterButton) {
                     );
 
                     heading.textContent =
-                        "He hee heee... you're really curious 👀";
+                        "He hee heee... Ni Revatu ne...😍😉";
 
                     enterButton.style.display =
                         "none";
@@ -504,7 +495,7 @@ if (enterButton) {
                                 </p>
 
                                 <p>
-                                    But I still have one question for you...
+                                    One last click......
                                 </p>
 
                                 <button id="questionBtn">
@@ -787,11 +778,14 @@ if (birthdayStart) {
                 2500
             );
 
-            loveSong.volume =
-                0;
+            if (loveSong) {
 
-            loveSong.currentTime =
-                0;
+                loveSong.volume =
+                    0;
+
+                loveSong.currentTime =
+                    0;
+            }
 
             cinematicTransition.classList.remove(
                 "gameReveal"
@@ -884,7 +878,6 @@ if (birthdayStart) {
 // GAME / LEVEL ELEMENTS
 // =====================================================
 
-
 const level1Card =
     document.querySelector("#level1Card");
 
@@ -957,6 +950,160 @@ const timerCount =
 
 
 // =====================================================
+// LEVEL 2 ELEMENTS
+// =====================================================
+
+// Q1
+
+const level2Q1Card =
+    document.querySelector("#level2Q1Card");
+
+const calendarDays =
+    document.querySelector("#calendarDays");
+
+const calendarMonth =
+    document.querySelector("#calendarMonth");
+
+const calendarSelected =
+    document.querySelector("#calendarSelected");
+
+const calendarSubmit =
+    document.querySelector("#calendarSubmit");
+
+const calendarPrev =
+    document.querySelector("#calendarPrev");
+
+const calendarNext =
+    document.querySelector("#calendarNext");
+
+const level2Q1Reaction =
+    document.querySelector("#level2Q1Reaction");
+
+const level2Q1ReactionText =
+    document.querySelector("#level2Q1ReactionText");
+
+const level2Q1TryAgain =
+    document.querySelector("#level2Q1TryAgain");
+
+const level2Q1Next =
+    document.querySelector("#level2Q1Next");
+
+
+// Q2
+
+const level2Q2Card =
+    document.querySelector("#level2Q2Card");
+
+const calendarQ2Days =
+    document.querySelector("#calendarQ2Days");
+
+const calendarQ2Month =
+    document.querySelector("#calendarQ2Month");
+
+const calendarQ2Selected =
+    document.querySelector("#calendarQ2Selected");
+
+const calendarQ2Submit =
+    document.querySelector("#calendarQ2Submit");
+
+const calendarQ2Prev =
+    document.querySelector("#calendarQ2Prev");
+
+const calendarQ2Next =
+    document.querySelector("#calendarQ2Next");
+
+const level2Q2Reaction =
+    document.querySelector("#level2Q2Reaction");
+
+const level2Q2ReactionText =
+    document.querySelector("#level2Q2ReactionText");
+
+const level2Q2TryAgain =
+    document.querySelector("#level2Q2TryAgain");
+
+const level2Q2Next =
+    document.querySelector("#level2Q2Next");
+
+
+// Q3
+
+const level2Q3Card =
+    document.querySelector("#level2Q3Card");
+
+const level2Q3Answer =
+    document.querySelector("#level2Q3Answer");
+
+const q3CharCount =
+    document.querySelector("#q3CharCount");
+
+const level2Q3Submit =
+    document.querySelector("#level2Q3Submit");
+
+const level2Q3Reaction =
+    document.querySelector("#level2Q3Reaction");
+
+const level2Q3ReactionText =
+    document.querySelector("#level2Q3ReactionText");
+
+const level2Q3Next =
+    document.querySelector("#level2Q3Next");
+
+
+// Q4
+
+const level2Q4Card =
+    document.querySelector("#level2Q4Card");
+
+const q4Answer =
+    document.querySelector("#level2Q4Answer");
+
+const q4CharacterCount =
+    document.querySelector("#q4CharCount");
+
+const q4Submit =
+    document.querySelector("#level2Q4Submit");
+
+const level2Q4Reaction =
+    document.querySelector("#level2Q4Reaction");
+
+const level2Q4ReactionText =
+    document.querySelector("#level2Q4ReactionText");
+
+const level2Q4Next =
+    document.querySelector("#level2Q4Next");
+
+
+// Q5
+
+const level2Q5Card =
+    document.querySelector("#level2Q5Card");
+
+const q5MeButton =
+    document.querySelector("#q5MeButton");
+
+const q5GobarButton =
+    document.querySelector("#q5GobarButton");
+
+const q5WrongReaction =
+    document.querySelector("#q5WrongReaction");
+
+const q5SecondQuestion =
+    document.querySelector("#q5SecondQuestion");
+
+const q5YesButton =
+    document.querySelector("#q5YesButton");
+
+const q5NoButton =
+    document.querySelector("#q5NoButton");
+
+const q5YesNoArea =
+    document.querySelector("#q5YesNoArea");
+
+const q5FinalSurprise =
+    document.querySelector("#q5FinalSurprise");
+
+
+// =====================================================
 // Q1 VARIABLES
 // =====================================================
 
@@ -964,7 +1111,7 @@ let q1Timer =
     null;
 
 let q1TimeLeft =
-    10;
+    20;
 
 let q1Answered =
     false;
@@ -977,6 +1124,72 @@ let currentQuestion =
 
 let score =
     0;
+
+// =====================================================
+// SAVE ALL ANSWERS
+// =====================================================
+
+let savedAnswers = {
+    l1q1: "",
+    l1q2: "",
+    l1q3: "",
+    l1q4: "",
+    l1q5: "",
+
+    l2q1: "",
+    l2q2: "",
+    l2q3: "",
+    l2q4: "",
+    l2q5: "",
+
+    finalScore: ""
+};
+
+
+// =====================================================
+// LEVEL 2 Q1 VARIABLES
+// =====================================================
+
+let calendarYear =
+    2026;
+
+let calendarMonthIndex =
+    7;
+
+let selectedDate =
+    null;
+
+const correctMeetYear =
+    2024;
+
+const correctMeetMonth =
+    11;
+
+const correctMeetDate =
+    2;
+
+
+// =====================================================
+// LEVEL 2 Q2 VARIABLES
+// =====================================================
+
+let calendarQ2Year =
+    2026;
+
+let calendarQ2MonthIndex =
+    7;
+
+let selectedQ2Date =
+    null;
+
+const correctKissYear =
+    2025;
+
+const correctKissMonth =
+    1;
+
+const correctKissDate =
+    23;
 
 
 // =====================================================
@@ -993,9 +1206,7 @@ document.addEventListener(
         ) {
 
             const gameCard =
-                document.querySelector(
-                    ".gameCard"
-                );
+                document.querySelector(".gameCard");
 
             if (gameCard) {
 
@@ -1060,37 +1271,28 @@ if (level1Button) {
 
             resetReaction();
 
+            currentQuestion =
+                1;
+
+            score =
+                0;
+
+                savedAnswers = {
+    l1q1: "",
+    l1q2: "",
+    l1q3: "",
+    l1q4: "",
+    l1q5: "",
+    l2q1: "",
+    l2q2: "",
+    l2q3: "",
+    l2q4: "",
+    l2q5: ""
+};
         }
     );
 }
 
-// =====================================================
-// LEVEL 2 → JUNGLE ENTRANCE
-// =====================================================
-
-
-
-
-// =====================================================
-// ENTER LEVEL 2
-// =====================================================
-
-if (enterLevel2) {
-
-    enterLevel2.addEventListener(
-        "click",
-        function () {
-
-            console.log(
-                "Level 2 started"
-            );
-
-            // We will put Level 2 Question 1 here later.
-
-        }
-    );
-
-}
 
 // =====================================================
 // RESET REACTION
@@ -1150,7 +1352,11 @@ if (showOptions) {
                 );
             }
 
-            optionsGrid.style.display = "";
+            if (optionsGrid) {
+
+                optionsGrid.style.display =
+                    "";
+            }
 
             showOptions.style.display =
                 "none";
@@ -1222,7 +1428,7 @@ function startQ1Timer() {
     clearInterval(q1Timer);
 
     q1TimeLeft =
-        10;
+        20;
 
     q1Answered =
         false;
@@ -1239,7 +1445,6 @@ function startQ1Timer() {
             q1TimeLeft;
     }
 
-   
 
     q1Options.forEach(
         function (option) {
@@ -1336,6 +1541,9 @@ if (submitAnswer) {
             q1Answered =
                 true;
 
+            savedAnswers["l1q" + currentQuestion] =
+                q1SelectedAnswer.dataset.answer;
+
             clearInterval(
                 q1Timer
             );
@@ -1354,18 +1562,19 @@ if (submitAnswer) {
             );
 
 
-           const correctAnswers = {
-    1: "A",
-    2: "B",
-    3: "C",
-    4: "B",
-    5: "A"
-};
+            const correctAnswers = {
+                1: "A",
+                2: "B",
+                3: "C",
+                4: "B",
+                5: "A"
+            };
 
-if (
-    q1SelectedAnswer.dataset.answer ===
-    correctAnswers[currentQuestion]
-) {
+
+            if (
+                q1SelectedAnswer.dataset.answer ===
+                correctAnswers[currentQuestion]
+            ) {
 
                 score += 10;
 
@@ -1406,14 +1615,13 @@ function showReaction(type) {
 
     if (!answerReaction) return;
 
- // Hide question card during reaction
 
-if (level1Card) {
+    if (level1Card) {
 
-    level1Card.style.display =
-        "none";
-}
-    // Hide question options
+        level1Card.style.display =
+            "none";
+    }
+
 
     if (optionsGrid) {
 
@@ -1436,8 +1644,6 @@ if (level1Card) {
     }
 
 
-    // Show reaction container
-
     answerReaction.style.display =
         "block";
 
@@ -1450,17 +1656,13 @@ if (level1Card) {
     answerReaction.className =
         "reactionActive";
 
-        // Make sure Next button is hidden
-// until the reaction is finished
 
-if (nextQuestionBtn) {
+    if (nextQuestionBtn) {
 
-    nextQuestionBtn.style.display =
-        "none";
-}
+        nextQuestionBtn.style.display =
+            "none";
+    }
 
-
-    // First judging phase
 
     if (reactionText) {
 
@@ -1473,8 +1675,6 @@ if (nextQuestionBtn) {
         `;
     }
 
-
-    // Reveal final reaction
 
     setTimeout(
         function () {
@@ -1508,7 +1708,7 @@ if (nextQuestionBtn) {
 
 
 // =====================================================
-// CORRECT REACTION — JUGNU
+// CORRECT REACTION
 // =====================================================
 
 function showCorrectReaction() {
@@ -1517,7 +1717,6 @@ function showCorrectReaction() {
 
         reactionVisual.innerHTML =
             "";
-
 
         for (
             let i = 0;
@@ -1556,11 +1755,11 @@ function showCorrectReaction() {
             <div class="reactionMessage correctMessage">
 
                 <h3>
-                    😛 WAITTT—
+                    😛 Aaye Haaye—
                 </h3>
 
                 <p>
-                    You actually know me that well?!
+                    Olkhey mne M ne..!!🥹
                 </p>
 
                 <p>
@@ -1575,7 +1774,7 @@ function showCorrectReaction() {
 
 
 // =====================================================
-// WRONG REACTION — OWL
+// WRONG REACTION
 // =====================================================
 
 function showWrongReaction() {
@@ -1619,7 +1818,7 @@ function showWrongReaction() {
                 </h3>
 
                 <p>
-                    You seriously thought I would choose THAT?!
+                schi piyu me aa choose kris eevu lagyu..?!😑
                 </p>
 
                 <p>
@@ -1634,7 +1833,7 @@ function showWrongReaction() {
 
 
 // =====================================================
-// MISSED REACTION — SAD MOON
+// MISSED REACTION
 // =====================================================
 
 function showMissedReaction() {
@@ -1680,8 +1879,7 @@ function showMissedReaction() {
                 </h3>
 
                 <p>
-                    I guess knowing me is harder than
-                    you thought. 😌
+                    Aree Aatli vaar lagey choose krta piyu..😑
                 </p>
 
             </div>
@@ -1689,6 +1887,234 @@ function showMissedReaction() {
         `;
     }
 }
+
+
+// =====================================================
+// NEXT QUESTION — LEVEL 1
+// =====================================================
+
+if (nextQuestionBtn) {
+
+    nextQuestionBtn.addEventListener(
+        "click",
+        function () {
+
+            if (currentQuestion === 5) {
+
+                showFinalResult();
+
+                return;
+            }
+
+
+            if (answerReaction) {
+
+                answerReaction.style.display =
+                    "none";
+
+                answerReaction.style.opacity =
+                    "0";
+
+                answerReaction.style.visibility =
+                    "hidden";
+            }
+
+
+            if (level1Card) {
+
+                level1Card.style.display =
+                    "block";
+            }
+
+
+            currentQuestion++;
+
+
+            const questions = {
+
+                2: {
+                    text:
+                        "Konsi chij muje jaldi khush karegi...?",
+
+                    images: [
+                        "q2-chocolate.jpg",
+                        "q2-hug.jpg",
+                        "q2-music.jpg",
+                        "q2-reading.jpg"
+                    ]
+                },
+
+                3: {
+                    text:
+                        "Me Mall me jakar sabse pehle kya kharidugi...?",
+
+                    images: [
+                        "q3-clothes.jpg",
+                        "q3-accessories.jpg",
+                        "q3-snacks.jpg",
+                        "q3-books.jpg"
+                    ]
+                },
+
+                4: {
+                    text:
+                        "Which room style will I choose?",
+
+                    images: [
+                        "q4-pink.jpg",
+                        "q4-darkroom.jpg",
+                        "q4-nature.jpg",
+                        "q4-fairylights.jpg"
+                    ]
+                },
+
+                5: {
+                    text:
+                        "Which Mausam do I like most?",
+
+                    images: [
+                        "q5-rain.jpg",
+                        "q5-snow.jpg",
+                        "q5-sunny.jpg",
+                        "q5-cloudy.jpg"
+                    ]
+                }
+
+            };
+
+
+            const question =
+                questions[currentQuestion];
+
+            if (!question) return;
+
+
+            const questionNumber =
+                document.querySelector(
+                    "#currentQuestion"
+                );
+
+            if (questionNumber) {
+
+                questionNumber.textContent =
+                    currentQuestion;
+            }
+
+
+            const questionText =
+                document.querySelector(
+                    "#level1Card .questionText"
+                );
+
+            if (questionText) {
+
+                questionText.textContent =
+                    question.text;
+            }
+
+
+            q1Options.forEach(
+                function (option, index) {
+
+                    const image =
+                        option.querySelector("img");
+
+                    if (image) {
+
+                        image.src =
+                            question.images[index];
+                    }
+
+                }
+            );
+
+
+            q1Options[0].dataset.answer =
+                "A";
+
+            q1Options[1].dataset.answer =
+                "B";
+
+            q1Options[2].dataset.answer =
+                "C";
+
+            q1Options[3].dataset.answer =
+                "D";
+
+
+            q1Answered =
+                false;
+
+            q1SelectedAnswer =
+                null;
+
+            clearInterval(
+                q1Timer
+            );
+
+
+            q1TimeLeft =
+                20;
+
+            if (timerCount) {
+
+                timerCount.textContent =
+                    "20";
+            }
+
+
+            q1Options.forEach(
+                function (option) {
+
+                    option.classList.remove(
+                        "selected",
+                        "correct",
+                        "wrong"
+                    );
+
+                    option.style.pointerEvents =
+                        "auto";
+
+                }
+            );
+
+
+            if (submitAnswer) {
+
+                submitAnswer.style.display =
+                    "none";
+
+                submitAnswer.disabled =
+                    true;
+            }
+
+
+            if (optionsGrid) {
+
+                optionsGrid.style.display =
+                    "none";
+            }
+
+
+            if (showOptions) {
+
+                showOptions.style.display =
+                    "inline-block";
+            }
+
+
+            nextQuestionBtn.style.display =
+                "none";
+
+
+            level1Card.classList.remove(
+                "options-visible"
+            );
+
+        }
+    );
+}
+
 
 // =====================================================
 // SHOW FINAL RESULT
@@ -1698,7 +2124,7 @@ function showFinalResult() {
 
     if (!resultCard) return;
 
-    // Hide reaction card
+
     if (answerReaction) {
 
         answerReaction.style.display =
@@ -1712,7 +2138,6 @@ function showFinalResult() {
     }
 
 
-    // Hide question card
     if (level1Card) {
 
         level1Card.style.display =
@@ -1720,12 +2145,10 @@ function showFinalResult() {
     }
 
 
-    // Show result card
     resultCard.style.display =
         "block";
 
 
-    // Show score
     if (finalScore) {
 
         finalScore.textContent =
@@ -1733,16 +2156,11 @@ function showFinalResult() {
     }
 
 
-    // Calculate percentage
-    // Maximum possible score = 50
-
     let percentage =
         Math.round(
             (score / 50) * 100
         );
 
-    // Don't allow the visual percentage
-    // to go below 0
 
     percentage =
         Math.max(
@@ -1772,59 +2190,61 @@ function showFinalResult() {
     }
 
 
-    // Result messages
-
     if (score >= 40) {
 
         resultTitle.textContent =
-            "You REALLY know me! 💖";
+            "Aaye haaye haaye haaye...💖";
 
         resultMessage.textContent =
-            "Okay wow... you actually know me ridiculously well. I’m impressed. 😭✨";
+            "Tu aatlu bdhu Olkhey mne...schii baauj baauj baauj saaru laagyu piyu...😭✨";
 
     }
 
     else if (score >= 25) {
 
         resultTitle.textContent =
-            "You know me pretty well 🥰";
+            "Brbr...olkhey mane M ne..🥹";
 
         resultMessage.textContent =
-            "Not bad at all... you definitely pay attention to me. There are still a few things to discover though. 👀";
+            "Chalo thik 6...Me Vicharelu eni krta to vadhar olkhey Mane...😁";
 
     }
 
     else if (score >= 10) {
 
         resultTitle.textContent =
-            "Hmm... we need to talk 👀";
+            "Bau ochha Marks ha piyuu...😏";
 
         resultMessage.textContent =
-            "You know some things about me... but clearly I still have a few secrets left. 🌙";
+            "Seriously aatlu jode raine B tane ni khbr mari psnd na psnd...☹️";
 
     }
 
     else if (score >= 0) {
 
         resultTitle.textContent =
-            "Do you even know me? 😭";
+            "piyu..tu olkhe B 6 mane..? 😭";
 
         resultMessage.textContent =
-            "I gave you chances... and somehow we ended up here. You definitely need to know me better. 😂";
+            " Bauuj Bauuj ochha maarks kevay ha piyu...sav aatla pan😑..aanthi vadhar to koi random b lai dese 😭";
 
     }
 
     else {
 
         resultTitle.textContent =
-            "WE NEED TO TALK. 💀";
+            "piyu..tu olkhe B 6 mane..? 😭";
 
         resultMessage.textContent =
-            "How did you manage to get a negative score?! I think you need a crash course on me. 😭";
+            " Bauuj Bauuj ochha maarks kevay ha piyu...sav aatla pan😑..aanthi vadhar to koi random b lai dese 😭";
 
     }
-
+sendAnswersToGoogleSheet({
+    ...savedAnswers,
+    finalScore: score
+});
 }
+
 
 
 // =====================================================
@@ -1837,14 +2257,13 @@ if (nextLevelBtn) {
         "click",
         function () {
 
-            // Hide result card
             if (resultCard) {
 
                 resultCard.style.display =
                     "none";
             }
 
-            // Hide reaction card
+
             if (answerReaction) {
 
                 answerReaction.style.display =
@@ -1857,7 +2276,7 @@ if (nextLevelBtn) {
                     "hidden";
             }
 
-            // Show Level 2 jungle entrance
+
             if (level2Intro) {
 
                 level2Intro.style.display =
@@ -1874,9 +2293,6 @@ if (nextLevelBtn) {
     );
 }
 
-// =====================================================
-// ENTER LEVEL 2
-// =====================================================
 
 // =====================================================
 // ENTER LEVEL 2 → QUESTION 1
@@ -1888,7 +2304,6 @@ if (enterLevel2) {
         "click",
         function () {
 
-            // Hide Level 2 jungle entrance
             if (level2Intro) {
 
                 level2Intro.style.display =
@@ -1896,7 +2311,6 @@ if (enterLevel2) {
             }
 
 
-            // Show Level 2 Question 1
             if (level2Q1Card) {
 
                 level2Q1Card.style.display =
@@ -1904,7 +2318,6 @@ if (enterLevel2) {
             }
 
 
-            // Reset calendar
             selectedDate =
                 null;
 
@@ -1913,7 +2326,6 @@ if (enterLevel2) {
 
                 calendarSelected.textContent =
                     "Select a date 📅";
-
             }
 
 
@@ -1921,412 +2333,26 @@ if (enterLevel2) {
 
                 calendarSubmit.disabled =
                     true;
-
             }
 
 
-           // Start Level 2 Q1 from August 2026
-calendarYear = 2026;
-calendarMonthIndex = 7;
+            calendarYear =
+                2026;
 
-createMeetCalendar();
+            calendarMonthIndex =
+                7;
+
+
+            createMeetCalendar();
 
         }
     );
 
 }
 
-/// =====================================================
-// NEXT QUESTION
-// =====================================================
-
-if (nextQuestionBtn) {
-
-    nextQuestionBtn.addEventListener(
-        "click",
-        function () {
-
-            // =========================================
-            // IF QUESTION 5 IS FINISHED → SHOW RESULT
-            // =========================================
-
-            if (currentQuestion === 5) {
-
-                showFinalResult();
-
-                return;
-            }
-
-
-            // =========================================
-            // HIDE REACTION SCREEN
-            // =========================================
-
-            answerReaction.style.display =
-                "none";
-
-            answerReaction.style.opacity =
-                "0";
-
-            answerReaction.style.visibility =
-                "hidden";
-
-
-            // =========================================
-            // SHOW QUESTION CARD
-            // =========================================
-
-            level1Card.style.display =
-                "block";
-
-
-            // =========================================
-            // MOVE TO NEXT QUESTION
-            // =========================================
-
-            currentQuestion++;
-
-
-            // =========================================
-            // QUESTION DATA
-            // =========================================
-
-            const questions = {
-
-                2: {
-                    text:
-                        "What can make me happy quickly?",
-
-                    images: [
-                        "q2-chocolate.jpg",
-                        "q2-hug.jpg",
-                        "q2-music.jpg",
-                        "q2-reading.jpg"
-                    ]
-                },
-
-                3: {
-                    text:
-                        "I enter a shop with no plan. Where will I go?",
-
-                    images: [
-                        "q3-clothes.jpg",
-                        "q3-accessories.jpg",
-                        "q3-snacks.jpg",
-                        "q3-books.jpg"
-                    ]
-                },
-
-                4: {
-                    text:
-                        "Which room style will I choose?",
-
-                    images: [
-                        "q4-pink.jpg",
-                        "q4-darkroom.jpg",
-                        "q4-nature.jpg",
-                        "q4-fairylights.jpg"
-                    ]
-                },
-
-                5: {
-                    text:
-                        "Which weather do I like most?",
-
-                    images: [
-                        "q5-rain.jpg",
-                        "q5-snow.jpg",
-                        "q5-sunny.jpg",
-                        "q5-cloudy.jpg"
-                    ]
-                }
-
-            };
-
-
-            // =========================================
-            // GET CURRENT QUESTION
-            // =========================================
-
-            const question =
-                questions[currentQuestion];
-
-
-            if (!question) {
-
-                return;
-
-            }
-
-
-            // =========================================
-            // CHANGE QUESTION NUMBER
-            // =========================================
-
-            document.querySelector(
-                "#currentQuestion"
-            ).textContent =
-                currentQuestion;
-
-
-            // =========================================
-            // CHANGE QUESTION TEXT
-            // =========================================
-
-            document.querySelector(
-                "#level1Card .questionText"
-            ).textContent =
-                question.text;
-
-
-            // =========================================
-            // CHANGE OPTION IMAGES
-            // =========================================
-
-            q1Options.forEach(
-                function (option, index) {
-
-                    option.querySelector("img").src =
-                        question.images[index];
-
-                }
-            );
-
-
-            // =========================================
-            // RESET OPTION LETTERS
-            // =========================================
-
-            q1Options[0].dataset.answer =
-                "A";
-
-            q1Options[1].dataset.answer =
-                "B";
-
-            q1Options[2].dataset.answer =
-                "C";
-
-            q1Options[3].dataset.answer =
-                "D";
-
-
-            // =========================================
-            // RESET QUESTION STATE
-            // =========================================
-
-            q1Answered =
-                false;
-
-            q1SelectedAnswer =
-                null;
-
-            clearInterval(
-                q1Timer
-            );
-
-
-            // =========================================
-            // RESET TIMER
-            // =========================================
-
-            q1TimeLeft =
-                10;
-
-            timerCount.textContent =
-                "10";
-
-
-            // =========================================
-            // RESET OPTIONS
-            // =========================================
-
-            q1Options.forEach(
-                function (option) {
-
-                    option.classList.remove(
-                        "selected",
-                        "correct",
-                        "wrong"
-                    );
-
-                    option.style.pointerEvents =
-                        "auto";
-
-                }
-            );
-
-
-            // =========================================
-            // RESET SUBMIT BUTTON
-            // =========================================
-
-            submitAnswer.style.display =
-                "none";
-
-            submitAnswer.disabled =
-                true;
-
-
-            // =========================================
-            // HIDE OPTIONS INITIALLY
-            // =========================================
-
-            optionsGrid.style.display =
-                "none";
-
-
-            // =========================================
-            // SHOW CHOOSE ANSWER BUTTON
-            // =========================================
-
-            showOptions.style.display =
-                "inline-block";
-
-
-            // =========================================
-            // HIDE NEXT BUTTON
-            // =========================================
-
-            nextQuestionBtn.style.display =
-                "none";
-
-
-            // =========================================
-            // REMOVE OPTION VISIBLE STATE
-            // =========================================
-
-            level1Card.classList.remove(
-                "options-visible"
-            );
-
-
-            // =========================================
-            // TIMER DOES NOT START YET
-            // =========================================
-
-            clearInterval(
-                q1Timer
-            );
-
-        }
-    );
-}
 
 // =====================================================
-// LEVEL 2 — QUESTION 1
-// FIRST MEET — CALENDAR
-// =====================================================
-
-const level2Q1Card =
-    document.querySelector("#level2Q1Card");
-
-const calendarDays =
-    document.querySelector("#calendarDays");
-
-const calendarMonth =
-    document.querySelector("#calendarMonth");
-
-const calendarSelected =
-    document.querySelector("#calendarSelected");
-
-const calendarSubmit =
-    document.querySelector("#calendarSubmit");
-
-const calendarPrev =
-    document.querySelector("#calendarPrev");
-
-const calendarNext =
-    document.querySelector("#calendarNext");
-
-const level2Q1Reaction =
-    document.querySelector("#level2Q1Reaction");
-
-const level2Q1ReactionText =
-    document.querySelector("#level2Q1ReactionText");
-
-const level2Q1TryAgain =
-    document.querySelector("#level2Q1TryAgain");
-
-const level2Q1Next =
-    document.querySelector("#level2Q1Next");
-
-// =====================================================
-// LEVEL 2 — QUESTION 2
-// FIRST KISS — CALENDAR
-// =====================================================
-
-const level2Q2Card =
-    document.querySelector("#level2Q2Card");
-
-const calendarQ2Days =
-    document.querySelector("#calendarQ2Days");
-
-const calendarQ2Month =
-    document.querySelector("#calendarQ2Month");
-
-const calendarQ2Selected =
-    document.querySelector("#calendarQ2Selected");
-
-const calendarQ2Submit =
-    document.querySelector("#calendarQ2Submit");
-
-const calendarQ2Prev =
-    document.querySelector("#calendarQ2Prev");
-
-const calendarQ2Next =
-    document.querySelector("#calendarQ2Next");
-
-const level2Q2Reaction =
-    document.querySelector("#level2Q2Reaction");
-
-const level2Q2ReactionText =
-    document.querySelector("#level2Q2ReactionText");
-
-const level2Q2TryAgain =
-    document.querySelector("#level2Q2TryAgain");
-
-const level2Q2Next =
-    document.querySelector("#level2Q2Next");
-
-// =====================================================
-// Q2 CALENDAR VARIABLES
-// =====================================================
-
-let calendarQ2Year = 2026;
-
-let calendarQ2MonthIndex = 7;
-// 7 = August
-
-let selectedQ2Date = null;
-
-
-// Correct answer — First Kiss
-const correctKissYear = 2025;
-const correctKissMonth = 1;
-// 1 = February
-
-const correctKissDate = 23;
-
-// =====================================================
-// CALENDAR VARIABLES
-// =====================================================
-
-let calendarYear = 2026;
-
-let calendarMonthIndex = 7;
-// 7 = August
-
-let selectedDate = null;
-
-
-// Correct answer
-const correctMeetYear = 2024;
-const correctMeetMonth = 11;
-const correctMeetDate = 2;
-
-
-// =====================================================
-// CREATE CALENDAR
+// CREATE Q1 CALENDAR
 // =====================================================
 
 function createMeetCalendar() {
@@ -2334,7 +2360,8 @@ function createMeetCalendar() {
     if (!calendarDays) return;
 
 
-    calendarDays.innerHTML = "";
+    calendarDays.innerHTML =
+        "";
 
 
     const firstDay =
@@ -2369,11 +2396,8 @@ function createMeetCalendar() {
 
         calendarMonth.textContent =
             `${monthName} ${calendarYear}`;
-
     }
 
-
-    // Empty spaces before first day
 
     for (
         let i = 0;
@@ -2390,11 +2414,8 @@ function createMeetCalendar() {
         calendarDays.appendChild(
             empty
         );
-
     }
 
-
-    // Create days
 
     for (
         let day = 1;
@@ -2437,18 +2458,21 @@ function createMeetCalendar() {
 
 
 // =====================================================
-// SELECT DATE
+// SELECT Q1 DATE
 // =====================================================
 
 function selectCalendarDate(day) {
 
     selectedDate = {
 
-        day: day,
+        day:
+            day,
 
-        month: calendarMonthIndex,
+        month:
+            calendarMonthIndex,
 
-        year: calendarYear
+        year:
+            calendarYear
 
     };
 
@@ -2519,14 +2543,13 @@ function selectCalendarDate(day) {
 
         calendarSubmit.disabled =
             false;
-
     }
 
 }
 
 
 // =====================================================
-// PREVIOUS MONTH
+// Q1 PREVIOUS MONTH
 // =====================================================
 
 if (calendarPrev) {
@@ -2543,25 +2566,26 @@ if (calendarPrev) {
                     11;
 
                 calendarYear--;
-
             }
+
 
             selectedDate =
                 null;
+
 
             if (calendarSubmit) {
 
                 calendarSubmit.disabled =
                     true;
-
             }
+
 
             if (calendarSelected) {
 
                 calendarSelected.textContent =
                     "Select a date 📅";
-
             }
+
 
             createMeetCalendar();
 
@@ -2572,7 +2596,7 @@ if (calendarPrev) {
 
 
 // =====================================================
-// NEXT MONTH
+// Q1 NEXT MONTH
 // =====================================================
 
 if (calendarNext) {
@@ -2589,25 +2613,26 @@ if (calendarNext) {
                     0;
 
                 calendarYear++;
-
             }
+
 
             selectedDate =
                 null;
+
 
             if (calendarSubmit) {
 
                 calendarSubmit.disabled =
                     true;
-
             }
+
 
             if (calendarSelected) {
 
                 calendarSelected.textContent =
                     "Select a date 📅";
-
             }
+
 
             createMeetCalendar();
 
@@ -2618,7 +2643,7 @@ if (calendarNext) {
 
 
 // =====================================================
-// CONFIRM DATE
+// Q1 CONFIRM DATE
 // =====================================================
 
 if (calendarSubmit) {
@@ -2629,6 +2654,26 @@ if (calendarSubmit) {
 
             if (!selectedDate) return;
 
+
+            const attemptedDate =
+            new Date(
+                selectedDate.year,
+                selectedDate.month,
+                selectedDate.day
+            ).toLocaleDateString(
+                "en-IN",
+                {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric"
+                }
+           );
+
+            if (savedAnswers.l2q1 === "") {
+                savedAnswers.l2q1 = attemptedDate;
+            } else {
+                savedAnswers.l2q1 += " | " + attemptedDate;
+            }
 
             const isCorrect =
 
@@ -2646,16 +2691,21 @@ if (calendarSubmit) {
                 true;
 
 
-            // Disable all calendar dates after confirmation
-document
-    .querySelectorAll("#calendarDays .calendarDay")
-    .forEach(function (button) {
+            document
+                .querySelectorAll(
+                    "#calendarDays .calendarDay"
+                )
+                .forEach(
+                    function (button) {
 
-        button.disabled = true;
-        button.style.pointerEvents = "none";
+                        button.disabled =
+                            true;
 
-    });
+                        button.style.pointerEvents =
+                            "none";
 
+                    }
+                );
 
 
             if (isCorrect) {
@@ -2677,7 +2727,7 @@ document
 
 
 // =====================================================
-// CORRECT ANSWER
+// Q1 CORRECT
 // =====================================================
 
 function showLevel2Q1Correct() {
@@ -2711,7 +2761,6 @@ function showLevel2Q1Correct() {
             </div>
 
         `;
-
     }
 
 
@@ -2719,7 +2768,6 @@ function showLevel2Q1Correct() {
 
         level2Q1TryAgain.style.display =
             "none";
-
     }
 
 
@@ -2727,14 +2775,13 @@ function showLevel2Q1Correct() {
 
         level2Q1Next.style.display =
             "inline-block";
-
     }
 
 }
 
 
 // =====================================================
-// WRONG ANSWER
+// Q1 WRONG
 // =====================================================
 
 function showLevel2Q1Wrong() {
@@ -2757,22 +2804,21 @@ function showLevel2Q1Wrong() {
                 </div>
 
                 <h3>
-                    Hmm... not quite! 🌿
+                    Ann... nai betuuu!! 🐷🌿
                 </h3>
 
                 <p>
-                    That's not the date I'm looking for...
+                    Y to galat Answer h...🥹🤍
                 </p>
 
                 <p>
                     But don't worry,
-                    you can try again or move on. 🦋
+                    tum ek or try kr sktey ho..😀 ya fir next question krke next par chala ja..🤌🥹
                 </p>
 
             </div>
 
         `;
-
     }
 
 
@@ -2780,7 +2826,6 @@ function showLevel2Q1Wrong() {
 
         level2Q1TryAgain.style.display =
             "inline-block";
-
     }
 
 
@@ -2788,14 +2833,13 @@ function showLevel2Q1Wrong() {
 
         level2Q1Next.style.display =
             "inline-block";
-
     }
 
 }
 
 
 // =====================================================
-// TRY AGAIN
+// Q1 TRY AGAIN
 // =====================================================
 
 if (level2Q1TryAgain) {
@@ -2812,7 +2856,6 @@ if (level2Q1TryAgain) {
 
                 level2Q1Reaction.style.display =
                     "none";
-
             }
 
 
@@ -2820,24 +2863,35 @@ if (level2Q1TryAgain) {
 
                 calendarSelected.textContent =
                     "Select a date 📅";
-
             }
 
 
             if (calendarSubmit) {
 
-    calendarSubmit.disabled = true;
+                calendarSubmit.disabled =
+                    true;
+            }
 
-}
 
-document
-    .querySelectorAll("#calendarDays .calendarDay")
-    .forEach(function (button) {
+            document
+                .querySelectorAll(
+                    "#calendarDays .calendarDay"
+                )
+                .forEach(
+                    function (button) {
 
-        button.disabled = false;
-        button.style.pointerEvents = "auto";
+                        button.disabled =
+                            false;
 
-    });
+                        button.style.pointerEvents =
+                            "auto";
+
+                        button.classList.remove(
+                            "selected"
+                        );
+
+                    }
+                );
 
 
             createMeetCalendar();
@@ -2849,7 +2903,7 @@ document
 
 
 // =====================================================
-// LEVEL 2 Q1 → Q2
+// Q1 → Q2
 // =====================================================
 
 if (level2Q1Next) {
@@ -2858,45 +2912,77 @@ if (level2Q1Next) {
         "click",
         function () {
 
-            // Hide Question 1
             if (level2Q1Card) {
-                level2Q1Card.style.display = "none";
+
+                level2Q1Card.style.display =
+                    "none";
             }
 
-            // Show Question 2
+
+            if (level2Q1Reaction) {
+
+                level2Q1Reaction.style.display =
+                    "none";
+            }
+
+
             if (level2Q2Card) {
-                level2Q2Card.style.display = "block";
+
+                level2Q2Card.style.display =
+                    "block";
             }
 
-            // Reset Q2 reaction area
-if (level2Q2Reaction) {
-    level2Q2Reaction.style.display = "none";
-}
+
+            if (level2Q2Reaction) {
+
+                level2Q2Reaction.style.display =
+                    "none";
+            }
 
 
+            if (level2Q2TryAgain) {
 
-if (level2Q2Next) {
-    level2Q2Next.style.display = "none";
-}
+                level2Q2TryAgain.style.display =
+                    "none";
+            }
 
-            // Apply Level 2 jungle theme
-document.body.classList.add("level2-jungle");
 
-            // Reset Q2 calendar
-            selectedQ2Date = null;
+            if (level2Q2Next) {
+
+                level2Q2Next.style.display =
+                    "none";
+            }
+
+
+            document.body.classList.add(
+                "level2-jungle"
+            );
+
+
+            selectedQ2Date =
+                null;
+
 
             if (calendarQ2Selected) {
+
                 calendarQ2Selected.textContent =
                     "Select a date 📅";
             }
 
+
             if (calendarQ2Submit) {
-                calendarQ2Submit.disabled = true;
+
+                calendarQ2Submit.disabled =
+                    true;
             }
 
-            // Start Q2 at August 2026
-            calendarQ2Year = 2026;
-            calendarQ2MonthIndex = 7;
+
+            calendarQ2Year =
+                2026;
+
+            calendarQ2MonthIndex =
+                7;
+
 
             createFirstKissCalendar();
 
@@ -2905,52 +2991,19 @@ document.body.classList.add("level2-jungle");
 
 }
 
-// =====================================================
-// INITIALIZE CALENDAR
-// =====================================================
-
-// Calendar will start when Level 2 Question 1 opens.
 
 // =====================================================
-// RESULT CARD → LEVEL 2
-// =====================================================
-
-const nextLevelButton =
-    document.querySelector("#nextLevelButton");
-
-if (nextLevelButton) {
-
-    nextLevelButton.addEventListener(
-        "click",
-        function () {
-
-            // Hide result
-            if (resultCard) {
-                resultCard.style.display = "none";
-            }
-
-            // Show Level 2 entrance
-            if (level2Intro) {
-                level2Intro.style.display = "flex";
-                level2Intro.style.opacity = "1";
-                level2Intro.style.visibility = "visible";
-            }
-
-        }
-    );
-
-}
-
-// =====================================================
-// LEVEL 2 — QUESTION 2 CALENDAR
-// FIRST KISS
+// Q2 CREATE CALENDAR
 // =====================================================
 
 function createFirstKissCalendar() {
 
     if (!calendarQ2Days) return;
 
-    calendarQ2Days.innerHTML = "";
+
+    calendarQ2Days.innerHTML =
+        "";
+
 
     const firstDay =
         new Date(
@@ -2959,12 +3012,14 @@ function createFirstKissCalendar() {
             1
         ).getDay();
 
+
     const daysInMonth =
         new Date(
             calendarQ2Year,
             calendarQ2MonthIndex + 1,
             0
         ).getDate();
+
 
     const monthName =
         new Date(
@@ -2977,15 +3032,13 @@ function createFirstKissCalendar() {
             }
         );
 
+
     if (calendarQ2Month) {
 
         calendarQ2Month.textContent =
             `${monthName} ${calendarQ2Year}`;
-
     }
 
-
-    // Empty spaces before first day
 
     for (
         let i = 0;
@@ -3002,11 +3055,8 @@ function createFirstKissCalendar() {
         calendarQ2Days.appendChild(
             empty
         );
-
     }
 
-
-    // Create dates
 
     for (
         let day = 1;
@@ -3045,51 +3095,65 @@ function createFirstKissCalendar() {
 
 }
 
+
 // =====================================================
-// Q2 — SELECT DATE
+// Q2 SELECT DATE
 // =====================================================
 
 function selectQ2Date(day) {
 
     selectedQ2Date = {
-        day: day,
-        month: calendarQ2MonthIndex,
-        year: calendarQ2Year
+
+        day:
+            day,
+
+        month:
+            calendarQ2MonthIndex,
+
+        year:
+            calendarQ2Year
+
     };
 
 
-    // Remove previous selection
-
     document
-        .querySelectorAll("#calendarQ2Days .calendarDay")
-        .forEach(function (button) {
+        .querySelectorAll(
+            "#calendarQ2Days .calendarDay"
+        )
+        .forEach(
+            function (button) {
 
-            button.classList.remove("selected");
+                button.classList.remove(
+                    "selected"
+                );
 
-        });
+            }
+        );
 
-
-    // Highlight selected date
 
     const allDays =
         document.querySelectorAll(
             "#calendarQ2Days .calendarDay"
         );
 
-    allDays.forEach(function (button) {
 
-        if (
-            Number(button.textContent) === day
-        ) {
+    allDays.forEach(
+        function (button) {
 
-            button.classList.add("selected");
+            if (
+                Number(button.textContent) ===
+                day
+            ) {
+
+                button.classList.add(
+                    "selected"
+                );
+
+            }
 
         }
+    );
 
-    });
-
-
-    // Show selected date
 
     if (calendarQ2Selected) {
 
@@ -3099,6 +3163,7 @@ function selectQ2Date(day) {
                 calendarQ2MonthIndex,
                 day
             );
+
 
         calendarQ2Selected.textContent =
             `You selected: ${date.toLocaleDateString(
@@ -3113,19 +3178,17 @@ function selectQ2Date(day) {
     }
 
 
-    // Enable Confirm Date
-
     if (calendarQ2Submit) {
 
         calendarQ2Submit.disabled =
             false;
-
     }
 
 }
 
+
 // =====================================================
-// Q2 — PREVIOUS MONTH
+// Q2 PREVIOUS MONTH
 // =====================================================
 
 if (calendarQ2Prev) {
@@ -3136,23 +3199,33 @@ if (calendarQ2Prev) {
 
             calendarQ2MonthIndex--;
 
+
             if (calendarQ2MonthIndex < 0) {
 
-                calendarQ2MonthIndex = 11;
-                calendarQ2Year--;
+                calendarQ2MonthIndex =
+                    11;
 
+                calendarQ2Year--;
             }
 
-            selectedQ2Date = null;
+
+            selectedQ2Date =
+                null;
+
 
             if (calendarQ2Submit) {
-                calendarQ2Submit.disabled = true;
+
+                calendarQ2Submit.disabled =
+                    true;
             }
 
+
             if (calendarQ2Selected) {
+
                 calendarQ2Selected.textContent =
                     "Select a date 📅";
             }
+
 
             createFirstKissCalendar();
 
@@ -3163,7 +3236,7 @@ if (calendarQ2Prev) {
 
 
 // =====================================================
-// Q2 — NEXT MONTH
+// Q2 NEXT MONTH
 // =====================================================
 
 if (calendarQ2Next) {
@@ -3174,23 +3247,33 @@ if (calendarQ2Next) {
 
             calendarQ2MonthIndex++;
 
+
             if (calendarQ2MonthIndex > 11) {
 
-                calendarQ2MonthIndex = 0;
-                calendarQ2Year++;
+                calendarQ2MonthIndex =
+                    0;
 
+                calendarQ2Year++;
             }
 
-            selectedQ2Date = null;
+
+            selectedQ2Date =
+                null;
+
 
             if (calendarQ2Submit) {
-                calendarQ2Submit.disabled = true;
+
+                calendarQ2Submit.disabled =
+                    true;
             }
 
+
             if (calendarQ2Selected) {
+
                 calendarQ2Selected.textContent =
                     "Select a date 📅";
             }
+
 
             createFirstKissCalendar();
 
@@ -3199,8 +3282,9 @@ if (calendarQ2Next) {
 
 }
 
+
 // =====================================================
-// Q2 — CONFIRM DATE
+// Q2 CONFIRM
 // =====================================================
 
 if (calendarQ2Submit) {
@@ -3212,29 +3296,58 @@ if (calendarQ2Submit) {
             if (!selectedQ2Date) return;
 
 
+            const attemptedDate =
+    new Date(
+        selectedQ2Date.year,
+        selectedQ2Date.month,
+        selectedQ2Date.day
+    ).toLocaleDateString(
+        "en-IN",
+        {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        }
+    );
+
+if (savedAnswers.l2q2 === "") {
+    savedAnswers.l2q2 = attemptedDate;
+} else {
+    savedAnswers.l2q2 += " | " + attemptedDate;
+}
+
+
             const isCorrect =
-                selectedQ2Date.day === correctKissDate &&
-                selectedQ2Date.month === correctKissMonth &&
-                selectedQ2Date.year === correctKissYear;
+
+                selectedQ2Date.day ===
+                    correctKissDate &&
+
+                selectedQ2Date.month ===
+                    correctKissMonth &&
+
+                selectedQ2Date.year ===
+                    correctKissYear;
 
 
-            // Disable confirm button
+            calendarQ2Submit.disabled =
+                true;
 
-            calendarQ2Submit.disabled = true;
-
-
-            // Disable all dates after confirmation
 
             document
                 .querySelectorAll(
                     "#calendarQ2Days .calendarDay"
                 )
-                .forEach(function (button) {
+                .forEach(
+                    function (button) {
 
-                    button.disabled = true;
-                    button.style.pointerEvents = "none";
+                        button.disabled =
+                            true;
 
-                });
+                        button.style.pointerEvents =
+                            "none";
+
+                    }
+                );
 
 
             if (isCorrect) {
@@ -3254,18 +3367,24 @@ if (calendarQ2Submit) {
 
 }
 
+
 // =====================================================
-// Q2 — CORRECT ANSWER
+// Q2 CORRECT
 // =====================================================
 
 function showLevel2Q2Correct() {
 
     if (!level2Q2Reaction) return;
 
-    level2Q2Reaction.style.display = "block";
+
+    level2Q2Reaction.style.display =
+        "block";
+
 
     if (level2Q2ReactionText) {
+
         level2Q2ReactionText.innerHTML = `
+
             <div class="level2CorrectReaction">
 
                 <div class="level2ReactionAnimal">
@@ -3282,33 +3401,44 @@ function showLevel2Q2Correct() {
                 </p>
 
             </div>
+
         `;
     }
 
-    /* SHOW BOTH BUTTONS */
 
     if (level2Q2TryAgain) {
-        level2Q2TryAgain.style.display = "inline-block";
+
+        level2Q2TryAgain.style.display =
+            "inline-block";
     }
 
+
     if (level2Q2Next) {
-        level2Q2Next.style.display = "inline-block";
+
+        level2Q2Next.style.display =
+            "inline-block";
     }
 
 }
 
+
 // =====================================================
-// Q2 — WRONG ANSWER
+// Q2 WRONG
 // =====================================================
 
 function showLevel2Q2Wrong() {
 
     if (!level2Q2Reaction) return;
 
-    level2Q2Reaction.style.display = "block";
+
+    level2Q2Reaction.style.display =
+        "block";
+
 
     if (level2Q2ReactionText) {
+
         level2Q2ReactionText.innerHTML = `
+
             <div class="level2WrongReaction">
 
                 <div class="level2ReactionAnimal">
@@ -3316,35 +3446,42 @@ function showLevel2Q2Wrong() {
                 </div>
 
                 <h3>
-                    Hmm... NOT QUITE! 🌿
+                    Ann... nai betuuu!! 🐷🌿
                 </h3>
 
                 <p>
-                    That's not the date I'm looking for...
+                    Y to galat Answer h...🥹🤍
                 </p>
 
                 <p>
-                    Think again... you might remember it. 💋
+                    But don't worry,
+                    tum ek or try kr sktey ho..😀 ya fir next question krke next par chala ja..🤌🥹
                 </p>
 
             </div>
+
         `;
     }
 
-    /* SHOW BOTH BUTTONS */
 
     if (level2Q2TryAgain) {
-        level2Q2TryAgain.style.display = "inline-block";
+
+        level2Q2TryAgain.style.display =
+            "inline-block";
     }
 
+
     if (level2Q2Next) {
-        level2Q2Next.style.display = "inline-block";
+
+        level2Q2Next.style.display =
+            "inline-block";
     }
 
 }
 
+
 // =====================================================
-// Q2 — TRY AGAIN
+// Q2 TRY AGAIN
 // =====================================================
 
 if (level2Q2TryAgain) {
@@ -3353,42 +3490,63 @@ if (level2Q2TryAgain) {
         "click",
         function () {
 
-            selectedQ2Date = null;
+            selectedQ2Date =
+                null;
 
-            // Hide reaction
+
             if (level2Q2Reaction) {
-                level2Q2Reaction.style.display = "none";
+
+                level2Q2Reaction.style.display =
+                    "none";
             }
 
-            // Reset selected date text
+
             if (calendarQ2Selected) {
+
                 calendarQ2Selected.textContent =
                     "Select a date 📅";
             }
 
-            // Disable confirm until a new date is selected
+
             if (calendarQ2Submit) {
-                calendarQ2Submit.disabled = true;
+
+                calendarQ2Submit.disabled =
+                    true;
             }
 
-            // Re-enable all calendar dates
+
             document
                 .querySelectorAll(
                     "#calendarQ2Days .calendarDay"
                 )
-                .forEach(function (button) {
+                .forEach(
+                    function (button) {
 
-                    button.disabled = false;
-                    button.style.pointerEvents = "auto";
-                    button.classList.remove("selected");
+                        button.disabled =
+                            false;
 
-                });
+                        button.style.pointerEvents =
+                            "auto";
 
-            // Hide buttons again
-            level2Q2TryAgain.style.display = "none";
+                        button.classList.remove(
+                            "selected"
+                        );
+
+                    }
+                );
+
+
+            if (level2Q2TryAgain) {
+
+                level2Q2TryAgain.style.display =
+                    "none";
+            }
+
 
             if (level2Q2Next) {
-                level2Q2Next.style.display = "none";
+
+                level2Q2Next.style.display =
+                    "none";
             }
 
         }
@@ -3396,8 +3554,9 @@ if (level2Q2TryAgain) {
 
 }
 
+
 // =====================================================
-// LEVEL 2 Q2 → Q3
+// Q2 → Q3
 // =====================================================
 
 if (level2Q2Next) {
@@ -3406,49 +3565,76 @@ if (level2Q2Next) {
         "click",
         function () {
 
-            // Hide Q2
             if (level2Q2Card) {
-                level2Q2Card.style.display = "none";
+
+                level2Q2Card.style.display =
+                    "none";
             }
 
-            // Hide Q2 reaction
+
             if (level2Q2Reaction) {
-                level2Q2Reaction.style.display = "none";
+
+                level2Q2Reaction.style.display =
+                    "none";
             }
 
-            // Hide Q2 buttons
+
             if (level2Q2TryAgain) {
-                level2Q2TryAgain.style.display = "none";
+
+                level2Q2TryAgain.style.display =
+                    "none";
             }
+
 
             if (level2Q2Next) {
-                level2Q2Next.style.display = "none";
+
+                level2Q2Next.style.display =
+                    "none";
             }
 
-            // Show Q3
+
             if (level2Q3Card) {
-                level2Q3Card.style.display = "block";
+
+                level2Q3Card.style.display =
+                    "block";
             }
 
-            // Reset Q3
+
             if (level2Q3Answer) {
-                level2Q3Answer.value = "";
+
+                level2Q3Answer.value =
+                    "";
+
+                level2Q3Answer.disabled =
+                    false;
             }
+
 
             if (q3CharCount) {
-                q3CharCount.textContent = "0";
+
+                q3CharCount.textContent =
+                    "0";
             }
+
 
             if (level2Q3Submit) {
-                level2Q3Submit.disabled = true;
+
+                level2Q3Submit.disabled =
+                    true;
             }
+
 
             if (level2Q3Reaction) {
-                level2Q3Reaction.style.display = "none";
+
+                level2Q3Reaction.style.display =
+                    "none";
             }
 
+
             if (level2Q3Next) {
-                level2Q3Next.style.display = "none";
+
+                level2Q3Next.style.display =
+                    "none";
             }
 
         }
@@ -3458,7 +3644,7 @@ if (level2Q2Next) {
 
 
 // =====================================================
-// LEVEL 2 Q3 — TEXTBOX INPUT
+// Q3 INPUT
 // =====================================================
 
 if (level2Q3Answer) {
@@ -3470,20 +3656,18 @@ if (level2Q3Answer) {
             const answer =
                 level2Q3Answer.value.trim();
 
-            // Update character count
+
             if (q3CharCount) {
 
                 q3CharCount.textContent =
                     level2Q3Answer.value.length;
-
             }
 
-            // Enable submit with even ONE character
+
             if (level2Q3Submit) {
 
                 level2Q3Submit.disabled =
                     answer.length === 0;
-
             }
 
         }
@@ -3491,8 +3675,9 @@ if (level2Q3Answer) {
 
 }
 
+
 // =====================================================
-// LEVEL 2 Q3 — SUBMIT ANSWER
+// Q3 SUBMIT
 // =====================================================
 
 if (level2Q3Submit) {
@@ -3504,7 +3689,15 @@ if (level2Q3Submit) {
             const answer =
                 level2Q3Answer.value.trim();
 
+            if (savedAnswers.l2q3 === "") {
+    savedAnswers.l2q3 = answer;
+} else {
+    savedAnswers.l2q3 += " | " + answer;
+}
+
+
             if (!answer) return;
+
 
             level2Q3Answer.disabled =
                 true;
@@ -3512,12 +3705,13 @@ if (level2Q3Submit) {
             level2Q3Submit.disabled =
                 true;
 
+
             if (level2Q3Reaction) {
 
                 level2Q3Reaction.style.display =
                     "block";
-
             }
+
 
             if (level2Q3ReactionText) {
 
@@ -3544,13 +3738,629 @@ if (level2Q3Submit) {
                     </div>
 
                 `;
-
             }
+
 
             if (level2Q3Next) {
 
                 level2Q3Next.style.display =
                     "inline-block";
+
+                setTimeout(
+                    function () {
+
+                        level2Q3Next.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+
+                    },
+                    100
+                );
+            }
+
+        }
+    );
+
+}
+
+
+// =====================================================
+// Q3 → Q4
+// =====================================================
+
+if (level2Q3Next) {
+
+    level2Q3Next.addEventListener(
+        "click",
+        function () {
+
+            if (level2Q3Card) {
+
+                level2Q3Card.style.display =
+                    "none";
+            }
+
+
+            if (level2Q3Reaction) {
+
+                level2Q3Reaction.style.display =
+                    "none";
+            }
+
+
+            if (level2Q3Next) {
+
+                level2Q3Next.style.display =
+                    "none";
+            }
+
+
+            if (level2Q4Card) {
+
+                level2Q4Card.style.display =
+                    "block";
+            }
+
+
+            if (q4Answer) {
+
+                q4Answer.value =
+                    "";
+
+                q4Answer.disabled =
+                    false;
+            }
+
+
+            if (q4CharacterCount) {
+
+                q4CharacterCount.textContent =
+                    "0";
+            }
+
+
+            if (q4Submit) {
+
+                q4Submit.disabled =
+                    true;
+            }
+
+
+            if (level2Q4Reaction) {
+
+                level2Q4Reaction.style.display =
+                    "none";
+            }
+
+
+            if (level2Q4Next) {
+
+                level2Q4Next.style.display =
+                    "none";
+            }
+
+        }
+    );
+
+}
+
+
+// =====================================================
+// Q4 INPUT
+// =====================================================
+
+if (q4Answer) {
+
+    q4Answer.addEventListener(
+        "input",
+        function () {
+
+            const answer =
+                q4Answer.value.trim();
+
+
+            if (q4CharacterCount) {
+
+                q4CharacterCount.textContent =
+                    q4Answer.value.length;
+            }
+
+
+            if (q4Submit) {
+
+                q4Submit.disabled =
+                    answer.length === 0;
+            }
+
+        }
+    );
+
+}
+
+
+// =====================================================
+// Q4 SUBMIT
+// =====================================================
+
+if (q4Submit) {
+
+    q4Submit.addEventListener(
+        "click",
+        function () {
+
+            const answer =
+                q4Answer.value.trim();
+
+
+            if (!answer) return;
+
+            if (savedAnswers.l2q4 === "") {
+    savedAnswers.l2q4 = answer;
+} else {
+    savedAnswers.l2q4 += " | " + answer;
+}
+
+
+            q4Answer.disabled =
+                true;
+
+            q4Submit.disabled =
+                true;
+
+
+            if (level2Q4Reaction) {
+
+                level2Q4Reaction.style.display =
+                    "block";
+            }
+
+
+            if (level2Q4ReactionText) {
+
+                level2Q4ReactionText.innerHTML = `
+
+                    <div class="level2CorrectReaction">
+
+                        <div class="level2ReactionAnimal">
+                            👀🌿
+                        </div>
+
+                        <h3>
+                            Hmm... that's what you'd miss? 🥹
+                        </h3>
+
+                        <p>
+                            I was curious what you'd say... 💔
+                        </p>
+
+                        <p>
+                            Your answer has been noted. 🌿✨
+                        </p>
+
+                    </div>
+
+                `;
+            }
+
+
+            if (level2Q4Next) {
+
+                level2Q4Next.style.display =
+                    "inline-block";
+
+                setTimeout(
+                    function () {
+
+                        level2Q4Next.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+
+                    },
+                    100
+                );
+            }
+
+        }
+    );
+
+}
+
+
+// =====================================================
+// Q4 → Q5
+// =====================================================
+// ONLY CONNECTION TO Q5
+// =====================================================
+
+if (level2Q4Next) {
+
+    level2Q4Next.addEventListener(
+        "click",
+        function () {
+
+            sendAnswersToGoogleSheet({
+    ...savedAnswers,
+    finalScore: score
+});
+
+            // Hide Q4
+            if (level2Q4Card) {
+
+                level2Q4Card.style.display =
+                    "none";
+            }
+
+
+            // Hide Q4 reaction
+            if (level2Q4Reaction) {
+
+                level2Q4Reaction.style.display =
+                    "none";
+            }
+
+
+            // Hide Q4 next button
+            level2Q4Next.style.display =
+                "none";
+
+
+            // Show Q5
+            if (level2Q5Card) {
+
+                level2Q5Card.style.display =
+                    "block";
+            }
+
+
+            // Reset Q5
+            if (q5WrongReaction) {
+
+                q5WrongReaction.style.display =
+                    "none";
+            }
+
+
+            if (q5SecondQuestion) {
+
+                q5SecondQuestion.style.display =
+                    "none";
+            }
+
+
+            if (q5FinalSurprise) {
+
+                q5FinalSurprise.style.display =
+                    "none";
+            }
+
+
+            // Reset NO button position
+            if (q5NoButton) {
+
+                q5NoButton.style.transform =
+                    "translate(0, 0)";
+            }
+
+
+            // Scroll to Q5
+            setTimeout(
+                function () {
+
+                    if (level2Q5Card) {
+
+                        level2Q5Card.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+
+                    }
+
+                },
+                100
+            );
+
+        }
+    );
+
+}
+
+
+// =====================================================
+// Q5 — GOBAR WRONG ANSWER
+// =====================================================
+
+if (q5GobarButton) {
+
+    q5GobarButton.addEventListener(
+        "click",
+        function () {
+
+            if (q5WrongReaction) {
+
+                q5WrongReaction.style.display =
+                    "block";
+            }
+
+
+            if (q5SecondQuestion) {
+
+                q5SecondQuestion.style.display =
+                    "none";
+            }
+
+
+            q5GobarButton.animate(
+                [
+                    {
+                        transform:
+                            "translateX(0)"
+                    },
+
+                    {
+                        transform:
+                            "translateX(-8px)"
+                    },
+
+                    {
+                        transform:
+                            "translateX(8px)"
+                    },
+
+                    {
+                        transform:
+                            "translateX(-5px)"
+                    },
+
+                    {
+                        transform:
+                            "translateX(0)"
+                    }
+                ],
+                {
+                    duration:
+                        500,
+
+                    iterations:
+                        1
+                }
+            );
+
+        }
+    );
+
+}
+
+
+// =====================================================
+// Q5 — ME CORRECT ANSWER
+// =====================================================
+
+if (q5MeButton) {
+
+    q5MeButton.addEventListener(
+        "click",
+        function () {
+
+            if (q5WrongReaction) {
+
+                q5WrongReaction.style.display =
+                    "none";
+            }
+
+
+            if (q5SecondQuestion) {
+
+                q5SecondQuestion.style.display =
+                    "block";
+            }
+
+
+            setTimeout(
+                function () {
+
+                    if (q5SecondQuestion) {
+
+                        q5SecondQuestion.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+
+                    }
+
+                },
+                100
+            );
+
+        }
+    );
+
+}
+
+
+// =====================================================
+// Q5 — MOVE NO BUTTON
+// =====================================================
+
+function moveNoButton() {
+
+    if (
+        !q5YesNoArea ||
+        !q5NoButton
+    ) return;
+
+
+    const areaRect =
+        q5YesNoArea.getBoundingClientRect();
+
+    const buttonRect =
+        q5NoButton.getBoundingClientRect();
+
+
+    const maxX =
+        Math.max(
+            0,
+            areaRect.width -
+            buttonRect.width
+        );
+
+
+    const maxY =
+        Math.max(
+            0,
+            areaRect.height -
+            buttonRect.height
+        );
+
+
+    const randomX =
+        Math.random() * maxX -
+        (
+            areaRect.width / 2 -
+            buttonRect.width / 2
+        );
+
+
+    const randomY =
+        Math.random() * maxY -
+        (
+            areaRect.height / 2 -
+            buttonRect.height / 2
+        );
+
+
+    q5NoButton.style.transform =
+        `translate(${randomX}px, ${randomY}px)`;
+}
+
+
+// =====================================================
+// Q5 — DESKTOP HOVER
+// =====================================================
+
+if (q5NoButton) {
+
+    q5NoButton.addEventListener(
+        "mouseenter",
+        moveNoButton
+    );
+
+
+    // =================================================
+    // Q5 — MOBILE TOUCH
+    // =================================================
+
+    q5NoButton.addEventListener(
+        "touchstart",
+        function (event) {
+
+            event.preventDefault();
+
+            moveNoButton();
+
+        },
+        {
+            passive: false
+        }
+    );
+
+
+    // =================================================
+    // Q5 — IF SOMEHOW CLICKED
+    // =================================================
+
+    q5NoButton.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+            moveNoButton();
+
+        }
+    );
+
+}
+
+
+// =====================================================
+// Q5 — YES
+// =====================================================
+
+if (q5YesButton) {
+
+    q5YesButton.addEventListener(
+        "click",
+        function () {
+
+            if (loveSong) {
+                    loveSong.pause();
+                }
+
+            if (q5SecondQuestion) {
+
+                q5SecondQuestion.style.display =
+                    "none";
+            }
+
+            if (q5FinalSurprise) {
+
+                q5FinalSurprise.style.display =
+                    "block";
+            }
+
+
+            setTimeout(
+                function () {
+
+                    if (q5FinalSurprise) {
+
+                        q5FinalSurprise.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+
+                    }
+
+                },
+                100
+            );
+
+        }
+    );
+
+}
+
+// =====================================
+// LOVE SONG PLAYLIST
+// =====================================
+
+const playlist = [
+    "summertime-sadness.mp3",
+    "love-story.mp3",
+    "headlights.mp3"
+];
+
+let currentPlaylistIndex = 0;
+
+if (loveSong) {
+
+    loveSong.addEventListener(
+        "ended",
+        function () {
+
+            if (
+                currentPlaylistIndex <
+                playlist.length
+            ) {
+
+                loveSong.src =
+                    playlist[currentPlaylistIndex];
+
+                currentPlaylistIndex++;
+
+                loveSong.play();
 
             }
 
@@ -3559,88 +4369,54 @@ if (level2Q3Submit) {
 
 }
 
-/* =====================================================
-   FORCE FIX — LEVEL 2 QUESTION 2 BUTTONS
-   ===================================================== */
+// =====================================
+// VIDEO ↔ BACKGROUND MUSIC CONTROL
+// =====================================
 
-document.addEventListener("click", function (e) {
+if (memoryVideo && loveSong) {
 
-    if (e.target && e.target.id === "calendarQ2Submit") {
+    memoryVideo.addEventListener(
+        "play",
+        function () {
 
-        setTimeout(function () {
+            loveSong.pause();
 
-            const reaction =
-                document.getElementById("level2Q2Reaction");
+        }
+    );
 
-            const tryAgain =
-                document.getElementById("level2Q2TryAgain");
+    memoryVideo.addEventListener(
+        "pause",
+        function () {
 
-            const next =
-                document.getElementById("level2Q2Next");
+            loveSong.play();
 
-            if (reaction) {
-                reaction.style.display = "block";
-                reaction.style.visibility = "visible";
-                reaction.style.opacity = "1";
-            }
+        }
+    );
 
-            if (tryAgain) {
-                tryAgain.style.display = "inline-block";
-                tryAgain.style.visibility = "visible";
-                tryAgain.style.opacity = "1";
-            }
+    memoryVideo.addEventListener(
+        "ended",
+        function () {
 
-            if (next) {
-                next.style.display = "inline-block";
-                next.style.visibility = "visible";
-                next.style.opacity = "1";
-            }
+            loveSong.play();
 
-        }, 100);
+        }
+    );
 
-    }
+}
 
-});
+// =====================================
+// VIDEO AUDIO CONTROL
+// =====================================
 
-// =====================================================
-// LEVEL 2 — QUESTION 3
-// FIRST IMPRESSION — TEXT ANSWER
-// =====================================================
+if (memoryVideo && loveSong) {
 
-const level2Q3Card =
-    document.querySelector("#level2Q3Card");
+    memoryVideo.addEventListener(
+        "ended",
+        function () {
 
-const level2Q3Answer =
-    document.querySelector("#level2Q3Answer");
+            loveSong.play();
 
-const q3CharCount =
-    document.querySelector("#q3CharCount");
+        }
+    );
 
-const level2Q3Submit =
-    document.querySelector("#level2Q3Submit");
-
-const level2Q3Reaction =
-    document.querySelector("#level2Q3Reaction");
-
-const level2Q3ReactionText =
-    document.querySelector("#level2Q3ReactionText");
-
-const level2Q3Next =
-    document.querySelector("#level2Q3Next");
-
-// =====================================================
-// LEVEL 2 — QUESTION 4
-// WHAT WOULD YOU MISS MOST?
-// =====================================================
-
-const level2Q4Card =
-    document.querySelector("#level2Q4Card");
-
-const q4Answer =
-    document.querySelector("#q4Answer");
-
-const q4CharacterCount =
-    document.querySelector("#q4CharacterCount");
-
-const q4Submit =
-    document.querySelector("#q4Submit");
+}

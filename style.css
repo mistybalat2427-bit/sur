@@ -11907,6 +11907,691 @@ body.chapter-birthday {
     transform: translateY(-4px) scale(1.03);
     box-shadow: 0 14px 32px rgba(70, 25, 50, 0.38);
 }
+
+/* ================================
+   LEVEL 3 — FULL SCREEN THEME
+   ================================ */
+
+#gamePhase:has(#level3Intro[style*="display: flex"]),
+#gamePhase:has(#level3Surprise[style*="display: flex"]),
+#gamePhase:has(#level3VideoScreen[style*="display: flex"]),
+#gamePhase:has(#level3Letter[style*="display: flex"]),
+#gamePhase:has(#level3Promise[style*="display: flex"]),
+#gamePhase:has(#level3Ending[style*="display: flex"]) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #35243f 0%,
+            #68415c 35%,
+            #87627d 65%,
+            #52647d 100%
+        ) !important;
+
+}
+
+/* Make every Level 3 screen use the SAME background */
+
+#level3Intro,
+#level3Surprise,
+#level3VideoScreen,
+#level3Letter,
+#level3Promise,
+#level3Ending {
+
+    background:
+        linear-gradient(
+            135deg,
+            #35243f 0%,
+            #68415c 35%,
+            #87627d 65%,
+            #52647d 100%
+        ) !important;
+
+}
+
+#level3LetterNext {
+    padding: 14px 28px !important;
+    background:
+        linear-gradient(
+            135deg,
+            #8f3f5d,
+            #b85f7d,
+            #80629c
+        ) !important;
+    color: #ffe7b8 !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 231, 184, 0.7) !important;
+    border-radius: 30px !important;
+    box-shadow:
+        0 8px 25px rgba(70, 25, 50, 0.28);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#level3LetterNext:hover {
+    color: #fff3d6 !important;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow:
+        0 14px 32px rgba(70, 25, 50, 0.38);
+}
+
+#level3LetterNext {
+    all: unset !important;
+
+    padding: 14px 28px !important;
+    background: linear-gradient(
+        135deg,
+        #8f3f5d,
+        #b85f7d,
+        #80629c
+    ) !important;
+
+    color: #ffe7b8 !important;
+
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+
+    border: 1px solid rgba(255, 231, 184, 0.7) !important;
+    border-radius: 30px !important;
+
+    box-shadow:
+        0 8px 25px rgba(70, 25, 50, 0.28) !important;
+
+    cursor: pointer !important;
+    display: inline-block !important;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease !important;
+}
+
+#level3LetterNext:hover {
+    color: #fff3d6 !important;
+
+    transform: translateY(-4px) scale(1.03) !important;
+
+    box-shadow:
+        0 14px 32px rgba(70, 25, 50, 0.38) !important;
+}
+
+/* FINAL — LETTER CONTINUE BUTTON SAME AS UNLOCK */
+
+#level3Letter #level3LetterNext {
+    padding: 14px 28px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8f3f5d,
+            #b85f7d,
+            #80629c
+        ) !important;
+
+    color: #ffe7b8 !important;
+
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+
+    border: 1px solid rgba(255, 231, 184, 0.7) !important;
+    border-radius: 30px !important;
+
+    box-shadow:
+        0 8px 25px rgba(70, 25, 50, 0.28) !important;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease !important;
+}
+
+#level3Letter #level3LetterNext:hover {
+    color: #fff3d6 !important;
+
+    transform:
+        translateY(-4px)
+        scale(1.03) !important;
+
+    box-shadow:
+        0 14px 32px rgba(70, 25, 50, 0.38) !important;
+}
+
+/* =========================================
+   LETTER PAD — CUTE WATERMARK STICKERS
+   ========================================= */
+
+#level3Letter .level3LetterCard {
+    position: relative;
+    overflow: hidden;
+}
+
+#letterStickers {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#letterStickers img {
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    opacity: 0.16;
+}
+
+/* Sticker positions */
+
+#letterStickers img:nth-child(1) {
+    top: 25px;
+    left: 25px;
+    transform: rotate(-12deg);
+}
+
+#letterStickers img:nth-child(2) {
+    top: 30px;
+    right: 25px;
+    transform: rotate(10deg);
+}
+
+#letterStickers img:nth-child(3) {
+    bottom: 90px;
+    left: 25px;
+    transform: rotate(-8deg);
+}
+
+#letterStickers img:nth-child(4) {
+    bottom: 25px;
+    right: 30px;
+    transform: rotate(12deg);
+}
+
+#letterStickers img:nth-child(5) {
+    bottom: 25px;
+    left: 45%;
+    transform: rotate(-5deg);
+}
+
+/* Keep letter content above stickers */
+
+#level3Letter .level3LetterCard > *:not(#letterStickers) {
+    position: relative;
+    z-index: 2;
+}
+
+/* Sticker positions */
+
+#letterStickers img:nth-child(1) {
+    top: 25px;
+    left: 25px;
+    transform: rotate(-12deg);
+}
+
+#letterStickers img:nth-child(2) {
+    top: 28px;
+    right: 25px;
+    transform: rotate(10deg);
+}
+
+#letterStickers img:nth-child(3) {
+    top: 42%;
+    left: 18%;
+    transform: rotate(-8deg);
+}
+
+#letterStickers img:nth-child(4) {
+    bottom: 25px;
+    right: 30px;
+    transform: rotate(12deg);
+}
+
+#letterStickers img:nth-child(5) {
+    top: 48%;
+    right: 18%;
+    transform: rotate(-5deg);
+}
+
+/* EXTRA MIDDLE WATERMARK STICKERS */
+
+#letterStickers::before,
+#letterStickers::after {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.13;
+}
+
+/* Middle-left sticker */
+#letterStickers::before {
+    top: 43%;
+    left: 5%;
+    background-image: url("stickers/sticker_3.png");
+    transform: rotate(-10deg);
+}
+
+/* Middle-right sticker */
+#letterStickers::after {
+    top: 48%;
+    right: 5%;
+    background-image: url("stickers/sticker_1.png");
+    transform: rotate(12deg);
+}
+
+/* EXTRA STICKERS — MIDDLE + BOTTOM LEFT */
+
+#letterStickers {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Extra middle-left */
+#letterStickers::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 43%;
+    left: 5%;
+    background: url("stickers/sticker_3.png") center / contain no-repeat;
+    opacity: 0.13;
+    transform: rotate(-10deg);
+}
+
+/* Extra middle-right */
+#letterStickers::after {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 48%;
+    right: 5%;
+    background: url("stickers/sticker_1.png") center / contain no-repeat;
+    opacity: 0.13;
+    transform: rotate(12deg);
+}
+
+/* Extra bottom-left */
+#letterStickers img:nth-child(6) {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    bottom: 25px;
+    left: 30px;
+    object-fit: contain;
+    opacity: 0.13;
+    transform: rotate(8deg);
+}
+
+/* Cute border for letter writing pad */
+
+#level3Letter .level3LetterCard {
+    border: 2px solid rgba(255, 210, 225, 0.75) !important;
+    border-radius: 24px !important;
+    box-shadow:
+        0 0 0 5px rgba(255, 235, 242, 0.12),
+        0 12px 35px rgba(30, 10, 25, 0.28) !important;
+}
+
+/* =========================================
+   FLOATING STICKERS BEHIND LETTER
+   ========================================= */
+
+#letterStickers img {
+    animation: letterStickerFloat 7s ease-in-out infinite;
+}
+
+/* Different timing so they don't move together */
+
+#letterStickers img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+#letterStickers img:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+#letterStickers img:nth-child(3) {
+    animation-delay: 2.4s;
+}
+
+#letterStickers img:nth-child(4) {
+    animation-delay: 3.6s;
+}
+
+#letterStickers img:nth-child(5) {
+    animation-delay: 4.8s;
+}
+
+#letterStickers img:nth-child(6) {
+    animation-delay: 2s;
+}
+
+/* Soft floating movement */
+
+@keyframes letterStickerFloat {
+    0% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -12px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+#level3Promise .level3SmallText {
+    color: #35101f !important;
+}
+
+/* THE END — final card */
+
+#level3Ending .level3SmallText {
+    font-family: "Brush Script MT", "Segoe Script", cursive !important;
+    font-size: 24px !important;
+    font-weight: 900 !important;
+    color: #35101f !important;
+    letter-spacing: 4px !important;
+    text-shadow: 0 2px 4px rgba(53, 16, 31, 0.25) !important;
+}
+
+/* Final card message */
+
+#level3Ending .level3EndingCard > p {
+    font-size: 21px !important;
+    color: #35101f !important;
+    font-weight: 600 !important;
+}
+
+#level3Ending .level3FinalMessage {
+    font-size: 22px !important;
+    color: #35101f !important;
+    font-weight: 600 !important;
+    font-style: italic;
+}
+
+/* FINAL CARD — STOP PHOTO FLOATING */
+
+#level3Ending #level3FloatingMemories img:nth-child(1),
+#level3Ending #level3FloatingMemories img:nth-child(2),
+#level3Ending #level3FloatingMemories img:nth-child(3),
+#level3Ending #level3FloatingMemories img:nth-child(4),
+#level3Ending #level3FloatingMemories img:nth-child(5),
+#level3Ending #level3FloatingMemories img:nth-child(6) {
+    animation: none !important;
+    animation-name: none !important;
+}
+
+/* Fixed positions */
+
+#level3Ending #level3FloatingMemories img:nth-child(1) {
+    top: 5% !important;
+    left: 18% !important;
+    transform: rotate(-8deg) !important;
+}
+
+#level3Ending #level3FloatingMemories img:nth-child(2) {
+    top: 3% !important;
+    left: 50% !important;
+    transform: translateX(-50%) rotate(4deg) !important;
+}
+
+#level3Ending #level3FloatingMemories img:nth-child(3) {
+    top: 5% !important;
+    right: 18% !important;
+    transform: rotate(8deg) !important;
+}
+
+#level3Ending #level3FloatingMemories img:nth-child(4) {
+    bottom: 5% !important;
+    left: 18% !important;
+    transform: rotate(8deg) !important;
+}
+
+#level3Ending #level3FloatingMemories img:nth-child(5) {
+    bottom: 3% !important;
+    left: 50% !important;
+    transform: translateX(-50%) rotate(-4deg) !important;
+}
+
+#level3Ending #level3FloatingMemories img:nth-child(6) {
+    bottom: 5% !important;
+    right: 18% !important;
+    transform: rotate(-8deg) !important;
+}
+
+/* FINAL CARD - COMPLETELY STATIC PHOTOS */
+
+#level3Ending #level3FloatingMemories {
+    animation: none !important;
+    transform: none !important;
+}
+
+#level3Ending #level3FloatingMemories img {
+    animation: none !important;
+    animation-name: none !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    animation-play-state: paused !important;
+}
+
+/* =========================================
+   FINAL CARD — STATIC PHOTOS
+   ========================================= */
+
+#level3Ending #level3FloatingMemories img:nth-child(1),
+#level3Ending #level3FloatingMemories img:nth-child(2),
+#level3Ending #level3FloatingMemories img:nth-child(3),
+#level3Ending #level3FloatingMemories img:nth-child(4),
+#level3Ending #level3FloatingMemories img:nth-child(5),
+#level3Ending #level3FloatingMemories img:nth-child(6) {
+    animation: none !important;
+    animation-name: none !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    animation-play-state: paused !important;
+}
+
+/* FINAL CARD - KILL ALL PHOTO ANIMATIONS */
+
+#level3Ending #level3FloatingMemories img {
+    animation: initial !important;
+    animation-name: none !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    animation-play-state: paused !important;
+}
+
+/* FINAL CARD — FORCE PHOTOS COMPLETELY STATIC */
+
+#level3FloatingMemories img {
+    animation: none !important;
+    transition: none !important;
+}
+
+#level3FloatingMemories img:nth-child(1),
+#level3FloatingMemories img:nth-child(2),
+#level3FloatingMemories img:nth-child(3),
+#level3FloatingMemories img:nth-child(4),
+#level3FloatingMemories img:nth-child(5),
+#level3FloatingMemories img:nth-child(6) {
+    animation: none !important;
+    animation-name: none !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    animation-play-state: paused !important;
+    transition: none !important;
+}
+
+/* FINAL CARD — 2 HORIZONTAL PHOTO ROWS */
+
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: visible !important;
+    pointer-events: none !important;
+}
+
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img {
+    position: absolute !important;
+    width: 90px !important;
+    height: 110px !important;
+    object-fit: cover !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* TOP ROW */
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img:nth-child(1) {
+    top: 8% !important;
+    left: 25% !important;
+}
+
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img:nth-child(2) {
+    top: 8% !important;
+    left: 45% !important;
+}
+
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img:nth-child(3) {
+    top: 8% !important;
+    left: 65% !important;
+}
+
+/* BOTTOM ROW */
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img:nth-child(4) {
+    bottom: 8% !important;
+    left: 25% !important;
+}
+
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img:nth-child(5) {
+    bottom: 8% !important;
+    left: 45% !important;
+}
+
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img:nth-child(6) {
+    bottom: 8% !important;
+    left: 65% !important;
+}
+
+/* FINAL CARD — CLEAN 3 + 3 PHOTO GRID */
+
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img {
+    width: 80px !important;
+    height: 100px !important;
+    position: absolute !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* TOP ROW */
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img:nth-child(1) {
+    top: 5% !important;
+    left: 15% !important;
+}
+
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img:nth-child(2) {
+    top: 5% !important;
+    left: 50% !important;
+}
+
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img:nth-child(3) {
+    top: 5% !important;
+    right: 15% !important;
+    left: auto !important;
+}
+
+/* BOTTOM ROW */
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img:nth-child(4) {
+    bottom: 5% !important;
+    left: 15% !important;
+    top: auto !important;
+}
+
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img:nth-child(5) {
+    bottom: 5% !important;
+    left: 50% !important;
+    top: auto !important;
+}
+
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img:nth-child(6) {
+    bottom: 5% !important;
+    right: 15% !important;
+    left: auto !important;
+    top: auto !important;
+}
+
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img:nth-child(2),
+#gamePhase:has(#level3Ending[style*="display: flex"]) #level3FloatingMemories img:nth-child(5) {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+/* RESTORE FLOATING MEMORIES ON OTHER LEVEL 3 CARDS */
+
+/* RESTORE FLOATING — EXCEPT FINAL CARD */
+
+#gamePhase:not(:has(#level3Ending[style*="display: flex"])) #level3FloatingMemories img:nth-child(1) {
+    animation: memoryPath1 13s ease-in-out infinite !important;
+}
+
+#gamePhase:not(:has(#level3Ending[style*="display: flex"])) #level3FloatingMemories img:nth-child(2) {
+    animation: memoryPath2 16s ease-in-out infinite 2s !important;
+}
+
+#gamePhase:not(:has(#level3Ending[style*="display: flex"])) #level3FloatingMemories img:nth-child(3) {
+    animation: memoryPath3 14s ease-in-out infinite 4s !important;
+}
+
+#gamePhase:not(:has(#level3Ending[style*="display: flex"])) #level3FloatingMemories img:nth-child(4) {
+    animation: memoryPath4 18s ease-in-out infinite 1s !important;
+}
+
+#gamePhase:not(:has(#level3Ending[style*="display: flex"])) #level3FloatingMemories img:nth-child(5) {
+    animation: memoryPath5 15s ease-in-out infinite 6s !important;
+}
+
+#gamePhase:not(:has(#level3Ending[style*="display: flex"])) #level3FloatingMemories img:nth-child(6) {
+    animation: memoryPath6 17s ease-in-out infinite 3s !important;
+}
+
+#level3Promise .level3SmallText {
+    color: #35101f !important;
+    font-weight: 900 !important;
+    opacity: 1 !important;
+    text-shadow: 0 2px 4px rgba(53, 16, 31, 0.25) !important;
+}
+
+#level3Promise .level3PromiseCard > p {
+    font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    font-style: italic !important;
+    color: #35101f !important;
+    letter-spacing: 0.5px !important;
+    text-shadow: 0 2px 3px rgba(53, 16, 31, 0.18) !important;
+}
 /* =====================================================
    END
    ===================================================== */

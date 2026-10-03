@@ -962,6 +962,12 @@ const level3PromiseInput =
 const level3PromiseButton =
     document.querySelector("#level3PromiseButton");
 
+level3PromiseButton.disabled = true;
+
+level3PromiseInput.addEventListener("input", function () {
+    level3PromiseButton.disabled = level3PromiseInput.value.trim() === "";
+});
+
 const level3Ending =
     document.querySelector("#level3Ending");
 
@@ -1000,6 +1006,10 @@ level2Q5Card.style.display = "none";
 
             const promiseText =
                 level3PromiseInput.value.trim();
+
+                if (promiseText === "") {
+    return;
+}
 
            savedAnswers.promise = promiseText;
 
@@ -4001,11 +4011,11 @@ if (level2Q3Submit) {
                         </div>
 
                         <h3>
-                            Hmm... interesting... 👀
+                            Hnnn... interesting... 👀
                         </h3>
 
                         <p>
-                            So THAT'S what you noticed about me first? 😭
+                            Achchha to tne pela ee gmyu tu..😭
                         </p>
 
                         <p>
@@ -4212,7 +4222,7 @@ if (q4Submit) {
                         </p>
 
                         <p>
-                            Your answer has been noted. 🌿✨
+                            Your answer noted my lord. 🌿✨
                         </p>
 
                     </div>

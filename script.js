@@ -884,6 +884,168 @@ const level1Card =
 const level2Intro =
     document.querySelector("#level2Intro");
 
+const level3Button = document.querySelector("#level3Button");
+const level3Intro = document.querySelector("#level3Intro");
+
+const level3Password = document.querySelector("#level3Password");
+const level3UnlockButton = document.querySelector("#level3UnlockButton");
+const level3PasswordMessage = document.querySelector("#level3PasswordMessage");
+const level3Surprise = document.querySelector("#level3Surprise");
+const level3SurpriseButton =
+    document.querySelector("#level3SurpriseButton");
+
+    if (level3SurpriseButton) {
+
+    level3SurpriseButton.addEventListener(
+        "click",
+        function () {
+
+            level3Surprise.style.display = "none";
+
+            level3VideoScreen.style.display = "flex";
+            level3VideoScreen.style.opacity = "1";
+            level3VideoScreen.style.visibility = "visible";
+
+            level3MemoryVideo.play();
+
+        }
+    );
+}
+
+const level3VideoScreen =
+    document.querySelector("#level3VideoScreen");
+
+const level3MemoryVideo =
+    document.querySelector("#level3MemoryVideo");
+
+const level3VideoNext =
+    document.querySelector("#level3VideoNext");
+
+   if (level3MemoryVideo && loveSong) {
+
+    level3MemoryVideo.addEventListener(
+        "play",
+        function () {
+            loveSong.pause();
+        }
+    );
+
+    level3MemoryVideo.addEventListener(
+        "pause",
+        function () {
+            loveSong.play();
+        }
+    );
+
+    level3MemoryVideo.addEventListener(
+        "ended",
+        function () {
+            loveSong.play();
+
+            level3VideoNext.style.display = "block";
+        }
+    );
+}
+
+const level3Letter =
+    document.querySelector("#level3Letter");
+
+const level3LetterNext =
+    document.querySelector("#level3LetterNext");
+
+const level3Promise =
+    document.querySelector("#level3Promise");
+
+const level3PromiseInput =
+    document.querySelector("#level3PromiseInput");
+
+const level3PromiseButton =
+    document.querySelector("#level3PromiseButton");
+
+const level3Ending =
+    document.querySelector("#level3Ending");
+
+const goToLevel3Button =
+    document.querySelector("#goToLevel3Button");
+
+    if (goToLevel3Button) {
+
+    goToLevel3Button.addEventListener(
+        "click",
+        function () {
+
+            level2Intro.style.display = "none";
+level2Q1Card.style.display = "none";
+level2Q2Card.style.display = "none";
+level2Q3Card.style.display = "none";
+level2Q4Card.style.display = "none";
+level2Q5Card.style.display = "none";
+
+            if (levelSelect) {
+                levelSelect.style.display = "none";
+            }
+
+            level3Intro.style.display = "flex";
+            level3Intro.style.opacity = "1";
+            level3Intro.style.visibility = "visible";
+
+        }
+    );
+}
+
+    if (level3PromiseButton) {
+    level3PromiseButton.addEventListener(
+        "click",
+        function () {
+
+            const promiseText =
+                level3PromiseInput.value.trim();
+
+           savedAnswers.promise = promiseText;
+
+sendAnswersToGoogleSheet(savedAnswers);
+
+            level3Promise.style.display = "none";
+            level3Ending.style.display = "flex";
+            level3Ending.style.opacity = "1";
+            level3Ending.style.visibility = "visible";
+        }
+    );
+}
+    if (level3LetterNext) {
+
+    level3LetterNext.addEventListener(
+        "click",
+        function () {
+
+            level3Letter.style.display = "none";
+
+            level3Promise.style.display = "flex";
+            level3Promise.style.opacity = "1";
+            level3Promise.style.visibility = "visible";
+
+        }
+    );
+}
+
+    if (level3VideoNext) {
+
+    level3VideoNext.addEventListener(
+        "click",
+        function () {
+
+            level3VideoScreen.style.display = "none";
+
+            level3Letter.style.display = "flex";
+            level3Letter.style.opacity = "1";
+            level3Letter.style.visibility = "visible";
+
+        }
+    );
+}
+
+const LEVEL3_SECRET_PASSWORD = "Mishu2427";
+
 const level2Button =
     document.querySelector("#level2Button");
 
@@ -1142,7 +1304,9 @@ let savedAnswers = {
     l2q4: "",
     l2q5: "",
 
-    finalScore: ""
+    finalScore: "",
+    promise:"",
+    passwordAttempts: ""
 };
 
 
@@ -2287,6 +2451,119 @@ if (nextLevelBtn) {
 
                 level2Intro.style.visibility =
                     "visible";
+            }
+
+        }
+    );
+}
+
+if (level3Button && level3Intro) {
+
+    level3Button.addEventListener(
+        "click",
+        function () {
+
+            if (levelSelect) {
+                levelSelect.style.display = "none";
+            }
+
+            level3Intro.style.display = "flex";
+            level3Intro.style.opacity = "1";
+            level3Intro.style.visibility = "visible";
+
+        }
+    );
+}
+
+if (level3UnlockButton) {
+
+    level3UnlockButton.addEventListener(
+        "click",
+        function () {
+
+            const enteredPassword = level3Password.value;
+
+savedAnswers.passwordAttempts +=
+    (savedAnswers.passwordAttempts ? " | " : "") +
+    enteredPassword;
+
+            if (level3Password.value === LEVEL3_SECRET_PASSWORD) {
+
+                level3PasswordMessage.textContent =
+    "Unlocked ✨";
+
+    const floatingMemories =
+    document.querySelector("#level3FloatingMemories");
+
+if (floatingMemories) {
+    floatingMemories.style.display = "block";
+}
+
+level3Intro.style.display = "none";
+
+level3Surprise.style.display = "flex";
+level3Surprise.style.opacity = "1";
+level3Surprise.style.visibility = "visible";
+
+const heartFireworks =
+    document.querySelector("#heartFireworks");
+
+if (heartFireworks) {
+
+    function createHeartBurst() {
+
+        heartFireworks.innerHTML = "";
+
+        for (let i = 0; i < 160; i++) {
+
+            const particle =
+                document.createElement("span");
+
+            particle.className = "heartSpark";
+
+            const t =
+                (Math.PI * 2 * i) / 160;
+
+            const x =
+                16 * Math.pow(Math.sin(t), 3);
+
+            const y =
+                -(13 * Math.cos(t)
+                - 5 * Math.cos(2 * t)
+                - 2 * Math.cos(3 * t)
+                - Math.cos(4 * t));
+
+            const size = 16;
+
+            particle.style.setProperty(
+                "--x",
+                `${x * size}px`
+            );
+
+            particle.style.setProperty(
+                "--y",
+                `${y * size}px`
+            );
+
+            heartFireworks.appendChild(particle);
+        }
+    }
+
+    createHeartBurst();
+
+    const fireworkInterval =
+        setInterval(function () {
+            createHeartBurst();
+        }, 900);
+    }
+    
+
+            } else {
+
+                level3PasswordMessage.textContent =
+                    "That's not the secret password... 💭";
+
+                level3Password.value = "";
             }
 
         }
@@ -4294,9 +4571,6 @@ if (q5YesButton) {
         "click",
         function () {
 
-            if (loveSong) {
-                    loveSong.pause();
-                }
 
             if (q5SecondQuestion) {
 
@@ -4309,6 +4583,12 @@ if (q5YesButton) {
                 q5FinalSurprise.style.display =
                     "block";
             }
+
+            if (goToLevel3Button) {
+
+    goToLevel3Button.style.display =
+        "block";
+}
 
 
             setTimeout(

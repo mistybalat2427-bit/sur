@@ -9422,6 +9422,2491 @@ body.chapter-birthday {
     }
 
 }
+
+/* =================================================
+   LEVEL 2 Q2 — MOBILE BUTTON VISIBILITY FIX
+   ================================================= */
+
+@media (max-width: 600px) {
+
+    #level2Q2Card {
+        height: 100dvh;
+        min-height: 100dvh;
+        overflow-y: auto;
+        padding-bottom: 80px !important;
+        box-sizing: border-box;
+    }
+
+    #level2Q2Card button {
+        min-height: 48px;
+        margin-bottom: 12px;
+    }
+
+    #level2Q2Card .level2RetryButtons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+}
+
+
+/* =========================================
+   LEVEL 3 — FINAL CHAPTER
+   ========================================= */
+
+#level3Intro,
+#level3Surprise,
+#level3VideoScreen,
+#level3Letter,
+#level3Promise,
+#level3Ending {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08), transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.06), transparent 30%),
+        linear-gradient(135deg, #08070d, #17101c, #09090f);
+
+    color: white;
+}
+
+.level3IntroCard,
+.level3SurpriseCard,
+.level3VideoCard,
+.level3LetterCard,
+.level3PromiseCard,
+.level3EndingCard {
+    position: relative;
+    z-index: 2;
+    width: min(700px, 92%);
+    padding: 40px 30px;
+    box-sizing: border-box;
+    text-align: center;
+
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 24px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.45),
+        inset 0 0 30px rgba(255,255,255,0.03);
+}
+
+.level3Chapter,
+.level3SmallText {
+    font-size: 12px;
+    letter-spacing: 4px;
+    opacity: 0.65;
+    margin-bottom: 18px;
+}
+
+.level3IntroCard h1,
+.level3SurpriseCard h1,
+.level3VideoCard h1,
+.level3LetterCard h1,
+.level3PromiseCard h1,
+.level3EndingCard h1 {
+    margin: 10px 0 20px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.level3IntroCard p,
+.level3SurpriseCard p,
+.level3LetterCard p,
+.level3PromiseCard p,
+.level3EndingCard p {
+    line-height: 1.8;
+    opacity: 0.85;
+}
+
+.level3Lock {
+    font-size: 42px;
+    margin: 25px 0;
+}
+
+#level3Password {
+    width: min(400px, 90%);
+    padding: 14px 18px;
+    margin: 10px auto 15px;
+    display: block;
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+
+    background: rgba(0,0,0,0.3);
+    color: white;
+    outline: none;
+    text-align: center;
+}
+
+#level3Password::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+#level3Intro button,
+#level3Surprise button,
+#level3VideoScreen button,
+#level3Letter button,
+#level3Promise button {
+    padding: 13px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+
+    background: rgba(255,255,255,0.12);
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+#level3Intro button:hover,
+#level3Surprise button:hover,
+#level3VideoScreen button:hover,
+#level3Letter button:hover,
+#level3Promise button:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+#level3PasswordMessage {
+    min-height: 24px;
+}
+
+.level3MemoryVideo {
+    width: 100%;
+    margin: 25px auto;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.level3MemoryVideo video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+#level3LetterText {
+    text-align: left;
+    margin: 30px auto;
+    line-height: 1.9;
+}
+
+#level3PromiseInput {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    padding: 15px;
+    margin: 20px 0;
+
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: rgba(0,0,0,0.25);
+    color: white;
+    outline: none;
+}
+
+#level3PromiseInput::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.level3FinalHeart {
+    font-size: 55px;
+    margin: 25px 0;
+}
+
+.level3FinalMessage {
+    font-style: italic;
+    opacity: 0.65;
+}
+
+@media (max-width: 600px) {
+
+    #level3Intro,
+    #level3Surprise,
+    #level3VideoScreen,
+    #level3Letter,
+    #level3Promise,
+    #level3Ending {
+        padding: 20px 12px;
+    }
+
+    .level3IntroCard,
+    .level3SurpriseCard,
+    .level3VideoCard,
+    .level3LetterCard,
+    .level3PromiseCard,
+    .level3EndingCard {
+        width: 96%;
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .level3IntroCard h1,
+    .level3SurpriseCard h1,
+    .level3VideoCard h1,
+    .level3LetterCard h1,
+    .level3PromiseCard h1,
+    .level3EndingCard h1 {
+        font-size: 25px;
+    }
+
+}
+
+#goToLevel3Button {
+    display: block;
+    margin: 20px auto;
+}
+
+#level3Intro,
+#level3Surprise,
+#level3VideoScreen,
+#level3Letter,
+#level3Promise,
+#level3Ending {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,182,193,0.35), transparent 28%),
+        radial-gradient(circle at 80% 70%, rgba(255,218,225,0.3), transparent 32%),
+        linear-gradient(135deg, #6b3048, #a95870, #d98a9d);
+}
+
+
+#level3FloatingMemories {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#level3FloatingMemories img {
+    position: absolute;
+    width: 90px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 14px;
+    opacity: 0.45;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+
+    animation: level3Float 8s ease-in-out infinite;
+}
+
+#level3FloatingMemories img:nth-child(1) {
+    left: 5%;
+    top: 15%;
+    transform: rotate(-10deg);
+}
+
+#level3FloatingMemories img:nth-child(2) {
+    right: 6%;
+    top: 12%;
+    transform: rotate(8deg);
+    animation-delay: 1s;
+}
+
+#level3FloatingMemories img:nth-child(3) {
+    left: 8%;
+    bottom: 15%;
+    transform: rotate(7deg);
+    animation-delay: 2s;
+}
+
+#level3FloatingMemories img:nth-child(4) {
+    right: 8%;
+    bottom: 18%;
+    transform: rotate(-8deg);
+    animation-delay: 3s;
+}
+
+#level3FloatingMemories img:nth-child(5) {
+    left: 25%;
+    top: 5%;
+    transform: rotate(5deg);
+    animation-delay: 4s;
+}
+
+#level3FloatingMemories img:nth-child(6) {
+    right: 25%;
+    bottom: 5%;
+    transform: rotate(-5deg);
+    animation-delay: 5s;
+}
+
+@keyframes level3Float {
+    0%, 100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -18px;
+    }
+}
+
+#level3VideoScreen {
+    overflow-y: auto;
+}
+
+.level3VideoCard {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.level3MemoryVideo {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.level3MemoryVideo video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    max-height: 55vh;
+    object-fit: contain;
+}
+
+#level3VideoNext {
+    display: none;
+    margin: 20px auto 5px;
+}
+
+#level3VideoCard {
+    max-height: 85vh;
+}
+
+.level3VideoCard {
+    max-height: 85vh;
+}
+
+.level3MemoryVideo video {
+    max-height: 45vh;
+}
+
+/* Darker Level 2 badge text */
+.level2QuestionBadge {
+    color: #5a3040 !important;
+    font-weight: 700;
+}
+
+/* =========================================
+   LEVEL 3 — COMPLETE ENHANCEMENT
+   ========================================= */
+
+/* -----------------------------------------
+   1. LEVEL 3 BACKGROUNDS
+   ----------------------------------------- */
+
+#level3Intro,
+#level3Surprise,
+#level3VideoScreen,
+#level3Letter,
+#level3Promise,
+#level3Ending {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255, 215, 190, 0.35),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(190, 210, 255, 0.28),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 20% 85%,
+            rgba(255, 190, 210, 0.25),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(190, 230, 215, 0.20),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #35243f,
+            #68415c,
+            #87627d,
+            #52647d
+        );
+}
+
+
+/* -----------------------------------------
+   2. MOVING DECORATIONS
+   ----------------------------------------- */
+
+#level3Intro::before,
+#level3Surprise::before,
+#level3VideoScreen::before,
+#level3Letter::before,
+#level3Promise::before,
+#level3Ending::before {
+
+    content: "♡   ✦   ❀   ✧   ♡   ❄   ✦   ♡   ❀";
+
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    font-size: 27px;
+    line-height: 4;
+    letter-spacing: 28px;
+
+    color: rgba(255, 240, 248, 0.38);
+
+    pointer-events: none;
+
+    animation: level3FloatingDecor 9s ease-in-out infinite;
+
+    z-index: 0;
+}
+
+@keyframes level3FloatingDecor {
+
+    0% {
+        transform: translateY(10px) rotate(-1deg);
+        opacity: 0.25;
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(3deg);
+        opacity: 0.65;
+    }
+
+    100% {
+        transform: translateY(10px) rotate(-1deg);
+        opacity: 0.25;
+    }
+}
+
+
+/* Keep actual cards/content above decorations */
+
+#level3Intro > *,
+#level3Surprise > *,
+#level3VideoScreen > *,
+#level3Letter > *,
+#level3Promise > *,
+#level3Ending > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* -----------------------------------------
+   3. LEVEL 3 HEADINGS
+   ----------------------------------------- */
+
+.level3IntroCard h1,
+.level3SurpriseCard h1,
+.level3VideoCard h1,
+.level3LetterCard h1,
+.level3PromiseCard h1,
+.level3EndingCard h1 {
+
+    font-weight: 800;
+    font-size: 32px;
+
+    color: #fff5f8;
+
+    text-shadow:
+        0 3px 18px rgba(30, 15, 35, 0.45);
+}
+
+
+/* Small headings */
+
+.level3Chapter,
+.level3SmallText {
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    color: #ffd9c7;
+}
+
+
+/* Normal text */
+
+.level3IntroCard p,
+.level3SurpriseCard p,
+.level3VideoCard p,
+.level3PromiseCard p,
+.level3EndingCard p {
+
+    color: #f9edf2;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   4. FLOATING MEMORY PHOTOS
+   ========================================= */
+
+#level3FloatingMemories {
+
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* Photos */
+
+#level3FloatingMemories img {
+
+    position: absolute;
+
+    width: 95px;
+    height: 115px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    opacity: 0.55;
+
+    border: 3px solid rgba(255, 245, 248, 0.75);
+
+    box-shadow:
+        0 10px 30px rgba(20, 10, 30, 0.35);
+
+    animation:
+        memoryFloat 6s ease-in-out infinite,
+        memoryRotate 9s ease-in-out infinite alternate;
+
+}
+
+
+/* Photo positions */
+
+#level3FloatingMemories img:nth-child(1) {
+    left: 4%;
+    top: 16%;
+    transform: rotate(-9deg);
+    animation-delay: 0s, 1s;
+}
+
+#level3FloatingMemories img:nth-child(2) {
+    right: 5%;
+    top: 13%;
+    transform: rotate(8deg);
+    animation-delay: 1s, 2s;
+}
+
+#level3FloatingMemories img:nth-child(3) {
+    left: 7%;
+    bottom: 13%;
+    transform: rotate(7deg);
+    animation-delay: 2s, 0s;
+}
+
+#level3FloatingMemories img:nth-child(4) {
+    right: 7%;
+    bottom: 15%;
+    transform: rotate(-8deg);
+    animation-delay: 3s, 3s;
+}
+
+#level3FloatingMemories img:nth-child(5) {
+    left: 24%;
+    top: 5%;
+    transform: rotate(5deg);
+    animation-delay: 4s, 1s;
+}
+
+#level3FloatingMemories img:nth-child(6) {
+    right: 24%;
+    bottom: 5%;
+    transform: rotate(-5deg);
+    animation-delay: 5s, 2s;
+}
+
+
+/* Photo floating */
+
+@keyframes memoryFloat {
+
+    0%,
+    100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -25px;
+    }
+}
+
+
+/* Photo rotation */
+
+@keyframes memoryRotate {
+
+    0% {
+        rotate: -5deg;
+    }
+
+    50% {
+        rotate: 5deg;
+    }
+
+    100% {
+        rotate: -4deg;
+    }
+}
+
+
+/* =========================================
+   5. VIDEO SECTION
+   ONLY DECORATIVE — NO HOVER
+   ========================================= */
+
+#gamePhase:has(#level3VideoScreen[style*="display: flex"]) .gameMoon {
+
+    display: none !important;
+}
+
+
+/* Video card */
+
+#level3VideoScreen .level3VideoCard {
+
+    width: min(760px, 92%);
+
+    padding: 38px 32px;
+
+    border-radius: 28px;
+
+    background:
+        rgba(255, 255, 255, 0.10);
+
+    border: 2px solid rgba(255, 225, 238, 0.30);
+
+    box-shadow:
+        0 25px 70px rgba(25, 15, 35, 0.35);
+
+    backdrop-filter: blur(14px);
+}
+
+
+/* Video frame */
+
+#level3VideoScreen .level3MemoryVideo {
+
+    padding: 8px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 205, 220, 0.45),
+            rgba(190, 205, 245, 0.35),
+            rgba(225, 215, 245, 0.40)
+        );
+
+    box-shadow:
+        0 12px 35px rgba(30, 15, 40, 0.30);
+}
+
+
+/* Video */
+
+#level3VideoScreen .level3MemoryVideo video {
+
+    display: block;
+
+    width: 100%;
+    max-width: 680px;
+
+    max-height: 55vh;
+
+    margin: auto;
+
+    border-radius: 14px;
+
+    object-fit: contain;
+}
+
+
+/* Video button */
+
+#level3VideoNext {
+
+    padding: 14px 30px !important;
+
+    margin: 22px auto 5px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d97999,
+            #9b78b8
+        ) !important;
+
+    color: white !important;
+
+    font-weight: 700;
+
+    border: none !important;
+
+    box-shadow:
+        0 8px 25px rgba(40, 20, 50, 0.30);
+}
+
+
+/* =========================================
+   6. LOVE LETTER
+   ========================================= */
+
+#level3Letter {
+
+    position: relative;
+}
+
+
+/* IMPORTANT:
+   position relative makes the decorations
+   belong to the letter card
+*/
+
+#level3Letter .level3LetterCard {
+
+    position: relative;
+
+    width: min(560px, 90%);
+
+    min-height: 680px;
+
+    padding: 55px 48px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf7,
+            #ffe9ef
+        );
+
+    color: #593044;
+
+    border: 3px solid #e4a0b5;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 25px 70px rgba(45, 20, 40, 0.38),
+        inset 0 0 0 8px rgba(255, 255, 255, 0.65);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* LETTER HOVER ONLY */
+
+#level3Letter .level3LetterCard:hover {
+
+    transform:
+        translateY(-10px)
+        rotate(-0.7deg);
+
+    box-shadow:
+        0 35px 90px rgba(45, 20, 40, 0.48),
+        0 0 35px rgba(255, 190, 210, 0.35),
+        inset 0 0 0 8px rgba(255, 255, 255, 0.75);
+}
+
+
+/* Top decoration */
+
+#level3Letter .level3LetterCard::before {
+
+    content:
+        "♡   ✦   ♡   ✦   ♡";
+
+    position: absolute;
+
+    top: 16px;
+    left: 20px;
+    right: 20px;
+
+    text-align: center;
+
+    color: #c85d7d;
+
+    font-size: 19px;
+
+    letter-spacing: 8px;
+
+    pointer-events: none;
+}
+
+
+/* Bottom decoration */
+
+#level3Letter .level3LetterCard::after {
+
+    content:
+        "✦   ❀   ♥   ❀   ✦";
+
+    position: absolute;
+
+    bottom: 16px;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    color: #c85d7d;
+
+    font-size: 19px;
+
+    letter-spacing: 7px;
+
+    pointer-events: none;
+}
+
+
+/* Letter small heading */
+
+#level3Letter .level3SmallText {
+
+    color: #a84668;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+
+/* Letter heading */
+
+#level3Letter .level3LetterCard h1 {
+
+    margin-top: 25px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    color: #873951;
+
+    text-shadow: none;
+}
+
+
+/* Actual letter */
+
+#level3LetterText {
+
+    margin: 35px auto;
+
+    padding: 5px 8px;
+
+    text-align: left;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+
+    line-height: 2;
+
+    color: #593044;
+
+    max-height: 470px;
+
+    overflow-y: auto;
+}
+
+
+/* Force letter paragraphs dark */
+
+#level3LetterText p {
+
+    color: #593044 !important;
+
+    opacity: 1 !important;
+
+    margin-bottom: 18px;
+}
+
+
+/* Letter button */
+
+#level3Letter #level3LetterNext {
+
+    margin-top: 20px;
+
+    padding: 14px 30px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d36d8c,
+            #a66db2
+        ) !important;
+
+    color: #ffffff !important;
+
+    font-weight: 700;
+
+    border: none !important;
+
+    box-shadow:
+        0 8px 22px rgba(80, 30, 60, 0.28);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+#level3Letter #level3LetterNext:hover {
+
+    transform:
+        translateY(-3px)
+        scale(1.03);
+
+    box-shadow:
+        0 12px 30px rgba(80, 30, 60, 0.38);
+}
+
+
+/* =========================================
+   7. PROMISE SECTION
+   ========================================= */
+
+#gamePhase:has(#level3Promise[style*="display: flex"]) .gameMoon {
+
+    display: none !important;
+}
+
+
+/* Promise background */
+
+#level3Promise {
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 220, 190, 0.30),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(190, 215, 255, 0.30),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #392842,
+            #66506f,
+            #6f718c,
+            #48646b
+        );
+}
+
+
+/* Promise card */
+
+#level3Promise .level3PromiseCard {
+
+    width: min(650px, 92%);
+
+    padding: 45px 38px;
+
+    background:
+        rgba(255, 250, 252, 0.13);
+
+    border:
+        2px solid rgba(255, 235, 242, 0.35);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 25px 70px rgba(25, 15, 35, 0.40);
+
+    backdrop-filter: blur(16px);
+
+    -webkit-backdrop-filter: blur(16px);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* Promise card hover */
+
+#level3Promise .level3PromiseCard:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 32px 80px rgba(25, 15, 35, 0.48);
+}
+
+
+/* Promise heading */
+
+#level3Promise .level3PromiseCard h1 {
+
+    color: #fff4f7;
+
+    font-weight: 800;
+
+    text-shadow:
+        0 3px 15px rgba(20, 10, 30, 0.40);
+}
+
+
+/* Promise paragraph */
+
+#level3Promise .level3PromiseCard p {
+
+    color: #f8eaf0;
+
+    opacity: 1;
+}
+
+
+/* Promise textbox */
+
+#level3Promise #level3PromiseInput {
+
+    min-height: 150px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border:
+        2px solid rgba(255, 230, 240, 0.40);
+
+    border-radius: 18px;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    padding: 18px;
+
+    outline: none;
+}
+
+
+#level3Promise #level3PromiseInput::placeholder {
+
+    color:
+        rgba(255, 235, 242, 0.70);
+}
+
+
+#level3Promise #level3PromiseInput:focus {
+
+    border-color:
+        rgba(255, 225, 238, 0.85);
+
+    box-shadow:
+        0 0 22px rgba(255, 200, 220, 0.25);
+}
+
+
+/* Promise button */
+
+#level3Promise #level3PromiseButton {
+
+    padding: 15px 30px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #df7899,
+            #a96db0,
+            #7776b5
+        ) !important;
+
+    color: white !important;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    border: none !important;
+
+    box-shadow:
+        0 10px 30px rgba(35, 20, 45, 0.32);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+#level3Promise #level3PromiseButton:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 15px 35px rgba(35, 20, 45, 0.42);
+}
+
+
+/* =========================================
+   8. MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    #level3FloatingMemories img {
+
+        width: 65px;
+        height: 82px;
+
+        opacity: 0.40;
+    }
+
+
+    #level3Letter .level3LetterCard {
+
+        width: 94%;
+
+        min-height: 650px;
+
+        padding: 48px 25px;
+    }
+
+
+    #level3Letter .level3LetterCard h1 {
+
+        font-size: 27px;
+    }
+
+
+    #level3LetterText {
+
+        font-size: 16px;
+
+        line-height: 1.9;
+
+        max-height: 430px;
+    }
+
+
+    #level3Promise .level3PromiseCard {
+
+        width: 94%;
+
+        padding: 32px 22px;
+    }
+
+
+    #level3Promise #level3PromiseInput {
+
+        min-height: 130px;
+
+        font-size: 16px;
+    }
+
+
+    #level3VideoScreen .level3VideoCard {
+
+        width: 92%;
+
+        padding: 28px 18px;
+    }
+
+
+    #level3VideoScreen .level3MemoryVideo video {
+
+        max-height: 45vh;
+    }
+}
+
+/* =========================================
+   REMOVE MOON FROM ALL LEVEL 3 SCREENS
+   ========================================= */
+
+#level3Intro .gameMoon,
+#level3Surprise .gameMoon,
+#level3VideoScreen .gameMoon,
+#level3Letter .gameMoon,
+#level3Promise .gameMoon,
+#level3Ending .gameMoon {
+    display: none !important;
+}
+
+/* =========================================
+   LEVEL 3 — REMOVE WHITE MOON COMPLETELY
+   ========================================= */
+
+#gamePhase:has(#level3Intro[style*="display: flex"]) .gameMoon,
+#gamePhase:has(#level3Surprise[style*="display: flex"]) .gameMoon,
+#gamePhase:has(#level3VideoScreen[style*="display: flex"]) .gameMoon,
+#gamePhase:has(#level3Letter[style*="display: flex"]) .gameMoon,
+#gamePhase:has(#level3Promise[style*="display: flex"]) .gameMoon,
+#gamePhase:has(#level3Ending[style*="display: flex"]) .gameMoon {
+    display: none !important;
+}
+
+ /* =========================================
+    LEVEL 3 — TEXT COLORS
+    ========================================= */
+
+ /* Main headings */
+#level3Intro h1,
+#level3Surprise h1,
+#level3VideoScreen h1,
+#level3Promise h1,
+#level3Ending h1 {
+    color: #3f2434 !important;
+    text-shadow: none !important;
+}
+
+ /* Small headings */
+#level3Intro .level3Chapter,
+#level3Intro .level3SmallText,
+#level3Surprise .level3SmallText,
+#level3VideoScreen .level3SmallText,
+#level3Promise .level3SmallText,
+#level3Ending .level3SmallText {
+    color: #6b304b !important;
+}
+
+ /* Normal paragraphs */
+#level3Intro p,
+#level3Surprise p,
+#level3VideoScreen p,
+#level3Promise p,
+#level3Ending p {
+    color: #4f3040 !important;
+    opacity: 1 !important;
+}
+
+ /* Password message */
+#level3PasswordMessage {
+    color: #7a3855 !important;
+}
+
+ /* Password input */
+#level3Password {
+    color: #4f3040 !important;
+}
+
+#level3Password::placeholder {
+    color: #8b6372 !important;
+}
+
+ /* Promise text area */
+#level3PromiseInput {
+    color: #4f3040 !important;
+    background: rgba(255, 250, 252, 0.55) !important;
+}
+
+#level3PromiseInput::placeholder {
+    color: #8b6372 !important;
+}
+
+ /* LOVE LETTER */
+#level3Letter .level3LetterCard h1 {
+    color: #7d304d !important;
+}
+
+#level3Letter .level3SmallText {
+    color: #a04462 !important;
+}
+
+#level3LetterText,
+#level3LetterText p {
+    color: #4b2939 !important;
+    opacity: 1 !important;
+}
+
+#level3Intro .level3Chapter {
+    font-size: 26px !important;
+    font-weight: 900 !important;
+    letter-spacing: 5px;
+    color: #5a263d !important;
+    opacity: 1 !important;
+    text-shadow: 0 1px 3px rgba(255, 220, 230, 0.6);
+}
+
+#level3Intro .level3IntroCard p {
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 1.7;
+    color: #4f3040 !important;
+    letter-spacing: 0.5px;
+}
+
+#level3Password::placeholder {
+    color: #8a5368 !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-style: italic;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+#level3Password {
+    font-family: Georgia, "Times New Roman", serif !important;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+#level3Password {
+    color: #ffffff !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+#level3Password::placeholder {
+    color: #ffffff !important;
+    opacity: 0.9 !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-style: italic;
+}
+#level3Intro .level3IntroCard h1 {
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 46px !important;
+    font-weight: 700 !important;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: #5a263d !important;
+    text-shadow:
+        0 2px 4px rgba(255, 255, 255, 0.7),
+        0 8px 20px rgba(90, 38, 61, 0.18);
+}
+
+#level3UnlockButton {
+    padding: 14px 28px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8f3f5d,
+            #b85f7d,
+            #80629c
+        ) !important;
+
+    color: #ffe7b8 !important;
+
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+
+    border: 1px solid rgba(255, 240, 245, 0.65) !important;
+    border-radius: 30px !important;
+
+    box-shadow:
+        0 8px 25px rgba(70, 25, 50, 0.28);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#level3UnlockButton:hover {
+    transform: translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 14px 32px rgba(70, 25, 50, 0.38);
+}
+
+/* =========================================
+   LEVEL 3 INTRO — FLOATING LOVE ELEMENTS
+   ========================================= */
+
+#level3Intro::after {
+    content:
+        "♡   ✦   ❄   ♥   ✧   ❀   ♡   ✨   ❄   ✦   ♥   ♡   ✧   ❄   ✨";
+
+    position: absolute;
+    inset: -20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    font-size: 24px;
+    line-height: 4;
+    letter-spacing: 25px;
+
+    color: rgba(255, 238, 245, 0.65);
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation:
+        level3LoveFloat 8s ease-in-out infinite,
+        level3LoveTwinkle 3s ease-in-out infinite alternate;
+}
+
+
+/* Floating movement */
+
+@keyframes level3LoveFloat {
+
+    0% {
+        transform: translateY(15px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(3deg);
+    }
+
+    100% {
+        transform: translateY(15px) rotate(-2deg);
+    }
+}
+
+
+/* Soft twinkling */
+
+@keyframes level3LoveTwinkle {
+
+    0% {
+        opacity: 0.30;
+    }
+
+    50% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 0.45;
+    }
+}
+
+/* =========================================
+   LEVEL 3 INTRO — INDIVIDUAL FLOATING ELEMENTS
+   ========================================= */
+
+#level3Intro::after {
+    content: "♡";
+    position: absolute;
+    left: 10%;
+    top: 18%;
+    font-size: 30px;
+    color: rgba(255, 230, 240, 0.65);
+    pointer-events: none;
+    z-index: 1;
+
+    animation: floatHeart1 6s ease-in-out infinite;
+}
+
+#level3Intro .level3IntroCard::before {
+    content: "✦";
+    position: absolute;
+    left: -120px;
+    top: 20px;
+    font-size: 25px;
+    color: #f5d7e2;
+    animation: floatStar1 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+#level3Intro .level3IntroCard::after {
+    content: "❄";
+    position: absolute;
+    right: -120px;
+    top: 80px;
+    font-size: 28px;
+    color: #dce8ff;
+    animation: floatSnow1 7s ease-in-out infinite;
+    pointer-events: none;
+}
+
+
+/* Extra floating symbols using the card's shadow layers */
+
+#level3Intro .level3IntroCard {
+    position: relative;
+}
+
+
+/* Heart */
+
+@keyframes floatHeart1 {
+
+    0% {
+        transform: translate(0, 0) rotate(-10deg);
+    }
+
+    25% {
+        transform: translate(25px, -35px) rotate(8deg);
+    }
+
+    50% {
+        transform: translate(-10px, -65px) rotate(-5deg);
+    }
+
+    75% {
+        transform: translate(30px, -30px) rotate(12deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(-10deg);
+    }
+}
+
+
+/* Star */
+
+@keyframes floatStar1 {
+
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: translate(-30px, 45px) rotate(180deg) scale(1.25);
+    }
+
+    100% {
+        transform: translate(10px, 5px) rotate(360deg) scale(1);
+    }
+}
+
+
+/* Snowflake */
+
+@keyframes floatSnow1 {
+
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    30% {
+        transform: translate(35px, -25px) rotate(90deg);
+    }
+
+    60% {
+        transform: translate(-20px, 35px) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+/* =========================================
+   LEVEL 3 INTRO — FULL SCREEN FLOATING ELEMENTS
+   ========================================= */
+
+#level3Intro::after {
+    content:
+        "♡     ✦     ❄     ♥     ✧     ❀     ✨     ♡     ❄     ✦     ♥     ✧     ❀     ✨     ♡     ❄";
+
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    font-size: 25px;
+    line-height: 4.5;
+    letter-spacing: 18px;
+    word-spacing: 25px;
+
+    color: rgba(255, 235, 245, 0.48);
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation: fullScreenFloat 12s ease-in-out infinite;
+}
+
+
+/* Whole screen slowly moves */
+
+@keyframes fullScreenFloat {
+
+    0% {
+        transform: translate(0, 10px) rotate(-1deg);
+        opacity: 0.35;
+    }
+
+    25% {
+        transform: translate(20px, -15px) rotate(1deg);
+        opacity: 0.55;
+    }
+
+    50% {
+        transform: translate(-15px, -30px) rotate(-1deg);
+        opacity: 0.7;
+    }
+
+    75% {
+        transform: translate(15px, -10px) rotate(1deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(0, 10px) rotate(-1deg);
+        opacity: 0.35;
+    }
+}
+
+/* =========================================
+   FLOATING DECORATIONS INSIDE LEVEL 3 CARD
+   ========================================= */
+
+#level3Intro .level3IntroCard {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoration container */
+#level3Intro .level3CardDecor {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Individual floating elements */
+#level3Intro .level3CardDecor span {
+    position: absolute;
+    display: block;
+    font-size: 22px;
+    opacity: 0.55;
+    pointer-events: none;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* Keep all actual card content above decorations */
+#level3Intro .level3IntroCard > :not(.level3CardDecor) {
+    position: relative;
+    z-index: 2;
+}
+
+/* Individual positions + movements */
+
+#level3Intro .level3CardDecor span:nth-child(1) {
+    left: 8%;
+    top: 18%;
+    animation: cardFloat1 5s infinite;
+}
+
+#level3Intro .level3CardDecor span:nth-child(2) {
+    left: 88%;
+    top: 12%;
+    animation: cardFloat2 6s infinite;
+}
+
+#level3Intro .level3CardDecor span:nth-child(3) {
+    left: 12%;
+    top: 48%;
+    animation: cardFloat3 7s infinite;
+}
+
+#level3Intro .level3CardDecor span:nth-child(4) {
+    right: 8%;
+    top: 42%;
+    animation: cardFloat4 5.5s infinite;
+}
+
+#level3Intro .level3CardDecor span:nth-child(5) {
+    left: 15%;
+    bottom: 10%;
+    animation: cardFloat5 6.5s infinite;
+}
+
+#level3Intro .level3CardDecor span:nth-child(6) {
+    right: 15%;
+    bottom: 14%;
+    animation: cardFloat6 7s infinite;
+}
+
+#level3Intro .level3CardDecor span:nth-child(7) {
+    left: 48%;
+    top: 8%;
+    animation: cardFloat7 5s infinite;
+}
+
+#level3Intro .level3CardDecor span:nth-child(8) {
+    right: 45%;
+    bottom: 7%;
+    animation: cardFloat8 6s infinite;
+}
+
+#level3Intro .level3CardDecor span:nth-child(9) {
+    left: 5%;
+    bottom: 32%;
+    animation: cardFloat3 6s infinite;
+}
+
+#level3Intro .level3CardDecor span:nth-child(10) {
+    right: 5%;
+    bottom: 30%;
+    animation: cardFloat1 7s infinite;
+}
+
+
+/* =========================================
+   DIFFERENT FLOATING MOVEMENTS
+   ========================================= */
+
+@keyframes cardFloat1 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(-5deg);
+    }
+    50% {
+        transform: translate(8px, -18px) rotate(8deg);
+    }
+}
+
+@keyframes cardFloat2 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(5deg);
+    }
+    50% {
+        transform: translate(-10px, 15px) rotate(-8deg);
+    }
+}
+
+@keyframes cardFloat3 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(12px, -20px);
+    }
+}
+
+@keyframes cardFloat4 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(-14px, -12px) rotate(12deg);
+    }
+}
+
+@keyframes cardFloat5 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(-8deg);
+    }
+    50% {
+        transform: translate(10px, -16px) rotate(5deg);
+    }
+}
+
+@keyframes cardFloat6 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-8px, -18px);
+    }
+}
+
+@keyframes cardFloat7 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(0, 12px) rotate(10deg);
+    }
+}
+
+@keyframes cardFloat8 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(5deg);
+    }
+    50% {
+        transform: translate(-10px, -12px) rotate(-5deg);
+    }
+}
+
+#level3Surprise .level3SmallText {
+    color: #32101f !important;
+    font-size: 18px !important;
+    font-weight: 1000 !important;
+    letter-spacing: 4px !important;
+    opacity: 1 !important;
+    text-shadow: 0 2px 3px rgba(50, 16, 31, 0.25) !important;
+}
+
+#level3Surprise .level3SurpriseCard h1 {
+    color: #4a1028 !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 48px !important;
+    font-weight: 900 !important;
+    letter-spacing: 1px !important;
+    text-shadow: 0 3px 5px rgba(74, 16, 40, 0.22) !important;
+}
+
+#level3Surprise .level3SurpriseCard p {
+    color: #2f1723 !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 21px !important;
+    font-weight: 600 !important;
+    line-height: 1.7 !important;
+    letter-spacing: 0.4px !important;
+    opacity: 1 !important;
+}
+
+#level3SurpriseButton {
+    padding: 14px 28px !important;
+    background:
+        linear-gradient(
+            135deg,
+            #8f3f5d,
+            #b85f7d,
+            #80629c
+        ) !important;
+    color: #ffe7b8 !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 231, 184, 0.7) !important;
+    border-radius: 30px !important;
+    box-shadow:
+        0 8px 25px rgba(70, 25, 50, 0.28);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#level3SurpriseButton:hover {
+    color: #fff3d6 !important;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow:
+        0 14px 32px rgba(70, 25, 50, 0.38);
+}
+
+#level3FloatingMemories img {
+    animation:
+        memoryFloat 8s ease-in-out infinite,
+        memoryRotate 9s ease-in-out infinite alternate;
+}
+
+@keyframes memoryFloat {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(35px, -20px);
+    }
+
+    40% {
+        transform: translate(-25px, -45px);
+    }
+
+    60% {
+        transform: translate(-55px, 10px);
+    }
+
+    80% {
+        transform: translate(25px, 35px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#level3FloatingMemories {
+    overflow: visible !important;
+}
+
+#level3FloatingMemories img {
+    animation:
+        memoryFloatWide 12s ease-in-out infinite,
+        memoryRotate 9s ease-in-out infinite alternate !important;
+}
+
+@keyframes memoryFloatWide {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(120px, -80px);
+    }
+
+    30% {
+        transform: translate(-100px, -150px);
+    }
+
+    45% {
+        transform: translate(-180px, 80px);
+    }
+
+    60% {
+        transform: translate(160px, 150px);
+    }
+
+    75% {
+        transform: translate(250px, -60px);
+    }
+
+    90% {
+        transform: translate(-120px, 100px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* =========================================
+   EACH MEMORY PHOTO MOVES INDEPENDENTLY
+   ========================================= */
+
+#level3FloatingMemories img:nth-child(1) {
+    animation: memoryPath1 13s ease-in-out infinite !important;
+}
+
+#level3FloatingMemories img:nth-child(2) {
+    animation: memoryPath2 16s ease-in-out infinite 2s !important;
+}
+
+#level3FloatingMemories img:nth-child(3) {
+    animation: memoryPath3 14s ease-in-out infinite 4s !important;
+}
+
+#level3FloatingMemories img:nth-child(4) {
+    animation: memoryPath4 18s ease-in-out infinite 1s !important;
+}
+
+#level3FloatingMemories img:nth-child(5) {
+    animation: memoryPath5 15s ease-in-out infinite 6s !important;
+}
+
+#level3FloatingMemories img:nth-child(6) {
+    animation: memoryPath6 17s ease-in-out infinite 3s !important;
+}
+
+
+/* PHOTO 1 */
+@keyframes memoryPath1 {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(160px, -120px); }
+    50%  { transform: translate(-140px, 100px); }
+    75%  { transform: translate(220px, 40px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* PHOTO 2 */
+@keyframes memoryPath2 {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(-180px, 80px); }
+    50%  { transform: translate(120px, -160px); }
+    75%  { transform: translate(-80px, -40px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* PHOTO 3 */
+@keyframes memoryPath3 {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(100px, 150px); }
+    50%  { transform: translate(-200px, -60px); }
+    75%  { transform: translate(80px, -170px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* PHOTO 4 */
+@keyframes memoryPath4 {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(-150px, -140px); }
+    50%  { transform: translate(190px, 90px); }
+    75%  { transform: translate(-60px, 180px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* PHOTO 5 */
+@keyframes memoryPath5 {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(200px, 70px); }
+    50%  { transform: translate(-100px, -180px); }
+    75%  { transform: translate(-210px, 40px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* PHOTO 6 */
+@keyframes memoryPath6 {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(-100px, 170px); }
+    50%  { transform: translate(180px, -100px); }
+    75%  { transform: translate(-180px, -80px); }
+    100% { transform: translate(0, 0); }
+}
+
+.heartFireworks {
+    display: none !important;
+}
+
+#level3Surprise .heartFireworks {
+    display: block !important;
+}
+
+
+
+@keyframes heartSparkBlast {
+    0% {
+        transform: translate(0, 0) scale(0.2);
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translate(
+                var(--x),
+                var(--y)
+            )
+            scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* =========================================
+   HEART FIREWORKS
+   ========================================= */
+
+#heartFireworks {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.heartSpark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+
+    background: #ff9fc0;
+
+    box-shadow:
+        0 0 8px #ff9fc0,
+        0 0 18px #ff5f9d,
+        0 0 30px #ffd0df;
+
+    animation: heartSparkBlast 1.8s ease-out forwards;
+}
+
+@keyframes heartSparkBlast {
+
+    0% {
+        transform: translate(0, 0) scale(0.2);
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translate(var(--x), var(--y))
+            scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* HEART FIREWORKS */
+
+#heartFireworks {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.heartSpark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+
+    background: #ff9fc0;
+
+    box-shadow:
+        0 0 8px #ff9fc0,
+        0 0 18px #ff5f9d,
+        0 0 30px #ffd0df;
+
+    animation: heartSparkBlast 1.8s ease-out forwards;
+}
+
+@keyframes heartSparkBlast {
+
+    0% {
+        transform: translate(0, 0) scale(0.2);
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translate(var(--x), var(--y))
+            scale(0.8);
+        opacity: 0;
+    }
+}
+
+#level3VideoScreen .level3SmallText {
+    font-family: "Brush Script MT", "Segoe Script", cursive !important;
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    color: #4f1b2f !important;
+    letter-spacing: 2px !important;
+    text-shadow: 0 2px 5px rgba(90, 38, 61, 0.18) !important;
+}
+
+#level3VideoScreen .level3SmallText {
+    transition: all 0.4s ease;
+    cursor: default;
+}
+
+#level3VideoScreen .level3SmallText:hover {
+    color: #2f1020 !important;
+    transform: scale(1.08);
+    letter-spacing: 3px !important;
+    text-shadow:
+        0 0 6px rgba(255, 190, 210, 0.9),
+        0 0 14px rgba(255, 150, 180, 0.6),
+        0 3px 8px rgba(60, 15, 35, 0.3) !important;
+}
+
+/* Remove white glow around video-screen card */
+
+#level3VideoScreen .level3VideoCard {
+    box-shadow: none !important;
+}
+
+#level3VideoScreen .level3VideoCard::before,
+#level3VideoScreen .level3VideoCard::after {
+    display: none !important;
+}
+
+#level3VideoScreen::before,
+#level3VideoScreen::after {
+    display: none !important;
+}
+
+/* Beautiful vertical scrollbar */
+
+#level3VideoScreen ::-webkit-scrollbar {
+    width: 8px;
+}
+
+#level3VideoScreen ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+}
+
+#level3VideoScreen ::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        #6b243f,
+        #a34d6b,
+        #6b243f
+    );
+    border-radius: 20px;
+    box-shadow:
+        0 0 8px rgba(163, 77, 107, 0.5);
+    transition: all 0.3s ease;
+}
+
+#level3VideoScreen ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+        180deg,
+        #3d1226,
+        #8f3558,
+        #3d1226
+    );
+    box-shadow:
+        0 0 10px rgba(255, 160, 190, 0.8),
+        0 0 20px rgba(255, 120, 160, 0.5);
+}
+
+#level3VideoNext {
+    padding: 14px 28px !important;
+    background: linear-gradient(
+        135deg,
+        #8f3f5d,
+        #b85f7d,
+        #80629c
+    ) !important;
+    color: #ffe7b8 !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 231, 184, 0.7) !important;
+    border-radius: 30px !important;
+    box-shadow: 0 8px 25px rgba(70, 25, 50, 0.28);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#level3VideoNext:hover {
+    color: #fff3d6 !important;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 14px 32px rgba(70, 25, 50, 0.38);
+}
+
+/* LETTER SCROLL + BUTTON AT BOTTOM */
+
+#level3Letter .level3LetterCard {
+    display: flex !important;
+    flex-direction: column !important;
+    max-height: 80vh;
+}
+
+#level3LetterText {
+    max-height: 45vh;
+    overflow-y: auto;
+    padding-right: 12px;
+    margin-bottom: 20px;
+}
+
+/* Beautiful scrollbar */
+#level3LetterText::-webkit-scrollbar {
+    width: 8px;
+}
+
+#level3LetterText::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+}
+
+#level3LetterText::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        #4f1b2f,
+        #8f3f5d,
+        #4f1b2f
+    );
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgba(143, 63, 93, 0.5);
+}
+
+#level3LetterText::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+        180deg,
+        #2f1020,
+        #6b243f,
+        #2f1020
+    );
+    box-shadow:
+        0 0 10px rgba(255, 160, 190, 0.7);
+}
+
+/* Continue button stays at bottom */
+#level3LetterNext {
+    margin-top: auto !important;
+    flex-shrink: 0;
+}
+
+/* LETTER: fixed card + scrollable letter */
+
+#level3Letter .level3LetterCard {
+    height: 80vh !important;
+    max-height: 80vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+}
+
+#level3LetterText {
+    height: 45vh !important;
+    max-height: 45vh !important;
+    min-height: 0 !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    padding-right: 15px !important;
+    margin-bottom: 15px !important;
+    flex-shrink: 1 !important;
+}
+
+/* Scrollbar */
+#level3LetterText::-webkit-scrollbar {
+    width: 8px;
+}
+
+#level3LetterText::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+}
+
+#level3LetterText::-webkit-scrollbar-thumb {
+    background: #4f1b2f;
+    border-radius: 10px;
+}
+
+#level3LetterText::-webkit-scrollbar-thumb:hover {
+    background: #2f1020;
+}
+
+/* Continue button at bottom */
+#level3LetterNext {
+    flex-shrink: 0 !important;
+    margin-top: auto !important;
+}
+
+#level3LetterText {
+    height: 300px !important;
+    max-height: 300px !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    padding-right: 15px !important;
+}
+
+#level3LetterText::-webkit-scrollbar {
+    width: 10px !important;
+}
+
+#level3LetterText::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-radius: 10px !important;
+}
+
+#level3LetterText::-webkit-scrollbar-thumb {
+    background: #4f1b2f !important;
+    border-radius: 10px !important;
+}
+
+#level3LetterText::-webkit-scrollbar-thumb:hover {
+    background: #2f1020 !important;
+}
+
+#level3LetterText p {
+    font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive !important;
+    font-size: 21px !important;
+    font-style: italic;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+#level3LetterNext {
+    padding: 14px 28px !important;
+    background: linear-gradient(
+        135deg,
+        #8f3f5d,
+        #b85f7d,
+        #80629c
+    ) !important;
+    color: #ffe7b8 !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 231, 184, 0.7) !important;
+    border-radius: 30px !important;
+    box-shadow: 0 8px 25px rgba(70, 25, 50, 0.28);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#level3LetterNext:hover {
+    color: #fff3d6 !important;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 14px 32px rgba(70, 25, 50, 0.38);
+}
 /* =====================================================
    END
    ===================================================== */

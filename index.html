@@ -186,11 +186,8 @@
              LEVEL 3
              ============================================= -->
 
-        <div class="levelBox levelLocked">
-
-            <div class="levelNumber">
-                III
-            </div>
+        <div class="levelBox levelLocked" id="level3Button">
+    <div class="levelNumber">III</div>
 
             <div class="levelLock">
                 🔒
@@ -304,12 +301,215 @@
             </p>
 
             <button id="enterLevel2">
-                Enter the Jungle →
+                Enter the level2 →
             </button>
 
         </div>
 
     </div>
+
+
+    <!-- ================================
+     LEVEL 3 INTRO
+     ================================ -->
+<div id="level3Intro" style="display: none;">
+
+    <div class="level3IntroCard">
+
+        <div class="level3CardDecor">
+    <span>♡</span>
+    <span>✦</span>
+    <span>❄</span>
+    <span>✨</span>
+    <span>♥</span>
+    <span>❀</span>
+    <span>✧</span>
+    <span>♡</span>
+    <span>❄</span>
+    <span>✦</span>
+</div>
+
+
+        <div class="level3Chapter">FINAL CHAPTER</div>
+
+        <h1>You've reached the end...</h1>
+
+        <p>
+            But there's one last thing<br>
+            waiting for you.
+        </p>
+
+        <div class="level3Lock">🔐</div>
+
+        <input
+            type="password"
+            id="level3Password"
+            placeholder="Enter the secret password"
+        >
+
+        <button id="level3UnlockButton">
+            Unlock the final chapter ✨
+        </button>
+
+        <p id="level3PasswordMessage"></p>
+
+    </div>
+
+</div>
+
+<div id="level3FloatingMemories" style="display: none;">
+
+    <img src="photo1.jpg" alt="">
+    <img src="photo2.jpg" alt="">
+    <img src="photo3.jpg" alt="">
+    <img src="photo4.jpg" alt="">
+    <img src="photo5.jpg" alt="">
+    <img src="photo6.jpg" alt="">
+
+</div>
+
+
+<!-- ================================
+     LEVEL 3 — ONE LAST SURPRISE
+     ================================ -->
+<div id="level3Surprise" style="display: none;">
+
+    <div class="level3SurpriseCard">
+
+        <div class="heartFireworks" id="heartFireworks"></div>
+
+        <div class="level3SmallText">
+            YOU MADE IT THIS FAR...
+        </div>
+
+        <h1>One last surprise for you ✨</h1>
+
+        <p>
+            I saved something special<br>
+            just for this moment.
+        </p>
+
+        <button id="level3SurpriseButton">
+            I'm ready ❤️
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================================
+     LEVEL 3 — MEMORIES VIDEO
+     ================================ -->
+<div id="level3VideoScreen" style="display: none;">
+
+    <div class="level3VideoCard">
+
+        <div class="level3SmallText">
+            A LITTLE PIECE OF US
+        </div>
+
+        <h1>Our memories ❤️</h1>
+
+        <div class="level3MemoryVideo">
+            <video id="level3MemoryVideo" controls>
+                <source src="memories.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <button id="level3VideoNext" style="display: none;">
+            Continue 💌
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================================
+     LEVEL 3 — THE LETTER
+     ================================ -->
+<div id="level3Letter" style="display: none;">
+
+    <div class="level3LetterCard">
+
+        <div class="level3SmallText">
+            SOMETHING I WANT YOU TO KNOW
+        </div>
+
+        <h1>For you, 💌</h1>
+
+        <div id="level3LetterText">
+            <p>
+                Write your letter here...
+            </p>
+        </div>
+
+        <button id="level3LetterNext">
+            Continue ✨
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================================
+     LEVEL 3 — THE PROMISE
+     ================================ -->
+<div id="level3Promise" style="display: none;">
+
+    <div class="level3PromiseCard">
+
+        <div class="level3SmallText">
+            ONE LAST QUESTION
+        </div>
+
+        <h1>What promise do you want to give me? 🤍</h1>
+
+        <p>
+            Take your time...
+        </p>
+
+        <textarea
+            id="level3PromiseInput"
+            placeholder="Write your promise here..."
+            rows="5"
+        ></textarea>
+
+        <button id="level3PromiseButton">
+            Give me your promise 💌
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================================
+     LEVEL 3 — FINAL ENDING
+     ================================ -->
+<div id="level3Ending" style="display: none;">
+
+    <div class="level3EndingCard">
+
+        <div class="level3SmallText">
+            THE END
+        </div>
+
+        <h1>And that's my little world with you. ❤️</h1>
+
+        <p>
+            Thank you for being a part of it.
+        </p>
+
+        <div class="level3FinalHeart">
+            ♥
+        </div>
+
+        <p class="level3FinalMessage">
+            Some stories don't really end...
+        </p>
+
+    </div>
+
+</div>
 
 
     <!-- =================================================
@@ -929,23 +1129,13 @@
                  YOUR MEMORIES VIDEO GOES HERE
                  ===================================== -->
 
-            <div class="q5MemoryVideo">
-
-                <video id="memoryVideo" controls>
-
-                    <source src="memories.mp4"
-                            type="video/mp4">
-
-                    Your browser does not support
-                    the video tag.
-
-                </video>
-
-            </div>
-
         </div>
 
     </div>
+
+    <button id="goToLevel3Button" style="display: none;">
+    Enter Level 3... ✨
+</button>
 
 </div>
 

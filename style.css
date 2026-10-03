@@ -9305,6 +9305,123 @@ body.chapter-birthday {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+
+
+/* LEVEL 2 Q1 — MOBILE BUTTON VISIBILITY FIX */
+
+@media (max-width: 600px) {
+
+    #level2Q1Card {
+        height: 100dvh;
+        min-height: 100dvh;
+        overflow-y: auto;
+        padding-bottom: 80px !important;
+    }
+
+    #level2Q1Card button {
+        min-height: 48px;
+        margin-bottom: 12px;
+    }
+
+    #level2Q1Card .level2RetryButtons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/* =================================================
+   LEVEL 2 — JUNGLE BACKGROUND FOR Q3, Q4, Q5
+   ================================================= */
+
+#gamePhase:has(#level2Q3Card[style*="display: block"]),
+#gamePhase:has(#level2Q4Card[style*="display: block"]),
+#gamePhase:has(#level2Q5Card[style*="display: block"]) {
+    background:
+        linear-gradient(
+            135deg,
+            #dff3d5,
+            #bfe3b2,
+            #eaf5d9
+        ) !important;
+}
+
+/* =================================================
+   LEVEL 2 Q3-Q5 — REMOVE NIGHT BACKGROUND LAYERS
+   ================================================= */
+
+#gamePhase:has(#level2Q3Card[style*="display: block"]) .gameMoon,
+#gamePhase:has(#level2Q4Card[style*="display: block"]) .gameMoon,
+#gamePhase:has(#level2Q5Card[style*="display: block"]) .gameMoon {
+    display: none !important;
+}
+
+#gamePhase:has(#level2Q3Card[style*="display: block"]) #gameStars,
+#gamePhase:has(#level2Q4Card[style*="display: block"]) #gameStars,
+#gamePhase:has(#level2Q5Card[style*="display: block"]) #gameStars {
+    display: none !important;
+}
+
+#gamePhase:has(#level2Q3Card[style*="display: block"]) .gameAtmosphere,
+#gamePhase:has(#level2Q4Card[style*="display: block"]) .gameAtmosphere,
+#gamePhase:has(#level2Q5Card[style*="display: block"]) .gameAtmosphere {
+    display: none !important;
+}
+
+
+/* JUNGLE BACKGROUND */
+
+#gamePhase:has(#level2Q3Card[style*="display: block"]),
+#gamePhase:has(#level2Q4Card[style*="display: block"]),
+#gamePhase:has(#level2Q5Card[style*="display: block"]) {
+    background:
+        linear-gradient(
+            135deg,
+            #dff3d5,
+            #bfe3b2,
+            #eaf5d9
+        ) !important;
+}
+
+/* =================================================
+   LEVEL 2 Q5 — VIDEO MOBILE FIX
+   ================================================= */
+
+@media (max-width: 600px) {
+
+    #level2Q5Card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .q5FinalCard {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .q5MemoryVideo {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .q5MemoryVideo video {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+}
 /* =====================================================
    END
    ===================================================== */

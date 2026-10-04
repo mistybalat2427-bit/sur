@@ -8,6 +8,10 @@ const birthdaySong =
 const loveSong =
     document.querySelector("#loveSong");
 
+let loveSongWasPlaying = false;
+let loveSongSavedTime = 0;
+
+
 const introText =
     document.querySelector("#introText");
 
@@ -894,23 +898,6 @@ const level3Surprise = document.querySelector("#level3Surprise");
 const level3SurpriseButton =
     document.querySelector("#level3SurpriseButton");
 
-    if (level3SurpriseButton) {
-
-    level3SurpriseButton.addEventListener(
-        "click",
-        function () {
-
-            level3Surprise.style.display = "none";
-
-            level3VideoScreen.style.display = "flex";
-            level3VideoScreen.style.opacity = "1";
-            level3VideoScreen.style.visibility = "visible";
-
-            level3MemoryVideo.play();
-
-        }
-    );
-}
 
 const level3VideoScreen =
     document.querySelector("#level3VideoScreen");
@@ -918,33 +905,109 @@ const level3VideoScreen =
 const level3MemoryVideo =
     document.querySelector("#level3MemoryVideo");
 
+const memoryMusic = document.querySelector("#memoryMusic");
+memoryMusic.loop = true;
+
+level3MemoryVideo.addEventListener("play", function () {
+
+    if (loveSong && !loveSong.paused) {
+        loveSongWasPlaying = true;
+        loveSongSavedTime = loveSong.currentTime;
+        loveSong.pause();
+    }
+
+});
+
+let lastVideoTime = 0;
+let memoryMusicTime = 0;
+let memoryMusicStarted = false;
+
+level3MemoryVideo.addEventListener("play", function () {
+
+    if (!memoryMusicStarted) {
+        memoryMusic.currentTime = 0;
+        memoryMusic.play();
+        memoryMusicStarted = true;
+    } else {
+        memoryMusic.play();
+    }
+
+    lastVideoTime = level3MemoryVideo.currentTime;
+});
+
+let memoryTimelineOffset = 0;
+
+level3MemoryVideo.addEventListener("seeked", function () {
+
+    if (!memoryMusic || !memoryMusic.duration) {
+        return;
+    }
+
+    const targetTime =
+        memoryTimelineOffset + level3MemoryVideo.currentTime;
+
+    memoryMusic.currentTime =
+        targetTime % memoryMusic.duration;
+
+});
+
+    const memoryParts = [
+    "memory1.mp4",
+    "memory2.mp4",
+    "memory3.mp4",
+    "memory4.mp4",
+    "memory5.mp4"
+];
+
+let currentMemoryPart = 0;
+
+level3MemoryVideo.addEventListener("ended", function () {
+
+    memoryTimelineOffset += level3MemoryVideo.duration;
+
+    currentMemoryPart++;
+
+    if (currentMemoryPart < memoryParts.length) {
+
+        level3MemoryVideo.src = memoryParts[currentMemoryPart];
+
+        level3MemoryVideo.load();
+
+        level3MemoryVideo.play();
+
+    } else {
+
+        memoryMusic.pause();
+        memoryMusic.currentTime = 0;
+        memoryMusicStarted = false;
+
+        if (loveSong && loveSongWasPlaying) {
+            loveSong.currentTime = loveSongSavedTime;
+            loveSong.play();
+            loveSongWasPlaying = false;
+        }
+
+        level3VideoNext.disabled = false;
+        level3VideoNext.style.display = "block";
+    }
+});
+
 const level3VideoNext =
     document.querySelector("#level3VideoNext");
 
-   if (level3MemoryVideo && loveSong) {
+    level3VideoNext.disabled = true;
 
-    level3MemoryVideo.addEventListener(
-        "play",
-        function () {
-            loveSong.pause();
-        }
-    );
+    if (level3SurpriseButton) {
+    level3SurpriseButton.addEventListener("click", function () {
 
-    level3MemoryVideo.addEventListener(
-        "pause",
-        function () {
-            loveSong.play();
-        }
-    );
+        level3Surprise.style.display = "none";
 
-    level3MemoryVideo.addEventListener(
-        "ended",
-        function () {
-            loveSong.play();
+        level3VideoScreen.style.display = "flex";
+        level3VideoScreen.style.opacity = "1";
+        level3VideoScreen.style.visibility = "visible";
 
-            level3VideoNext.style.display = "block";
-        }
-    );
+        level3MemoryVideo.play();
+    });
 }
 
 const level3Letter =

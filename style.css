@@ -12592,6 +12592,15 @@ body.chapter-birthday {
     letter-spacing: 0.5px !important;
     text-shadow: 0 2px 3px rgba(53, 16, 31, 0.18) !important;
 }
+
+#level3LetterText p {
+    font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    font-style: normal !important;
+    line-height: 1.8 !important;
+    letter-spacing: 0.4px !important;
+}
 /* =====================================================
    END
    ===================================================== */

@@ -935,6 +935,12 @@ level3MemoryVideo.addEventListener("play", function () {
     lastVideoTime = level3MemoryVideo.currentTime;
 });
 
+level3MemoryVideo.addEventListener("pause", function () {
+
+    memoryMusic.pause();
+
+});
+
 let memoryTimelineOffset = 0;
 
 level3MemoryVideo.addEventListener("seeked", function () {
@@ -986,9 +992,13 @@ level3MemoryVideo.addEventListener("ended", function () {
             loveSong.play();
             loveSongWasPlaying = false;
         }
+ currentMemoryPart = 0;
 
-        level3VideoNext.disabled = false;
-        level3VideoNext.style.display = "block";
+    level3MemoryVideo.src = memoryParts[0];
+    level3MemoryVideo.load();
+
+    level3VideoNext.disabled = false;
+    level3VideoNext.style.display = "block";
     }
 });
 
@@ -4692,7 +4702,8 @@ if (q5YesButton) {
 const playlist = [
     "summertime-sadness.mp3",
     "love-story.mp3",
-    "headlights.mp3"
+    "headlights.mp3",
+    "night-changes.mp3"
 ];
 
 let currentPlaylistIndex = 0;

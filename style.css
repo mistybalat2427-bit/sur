@@ -12696,15 +12696,6 @@ body.chapter-birthday {
     background: #000;
 }
 
-#level3MemoryVideo:fullscreen {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    aspect-ratio: 9 / 16 !important;
-    max-width: 430px !important;
-    margin: auto !important;
-    background: black !important;
-}
 /* =====================================================
    END
    ===================================================== */

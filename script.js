@@ -904,6 +904,14 @@ const level3VideoScreen =
 
 const level3MemoryVideo =
     document.querySelector("#level3MemoryVideo");
+
+    if (screen.orientation) {
+    screen.orientation.addEventListener("change", function () {
+        if (document.fullscreenElement === level3MemoryVideo) {
+            document.body.style.overflow = "hidden";
+        }
+    });
+}
     
 
    

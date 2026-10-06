@@ -905,6 +905,14 @@ const level3VideoScreen =
 const level3MemoryVideo =
     document.querySelector("#level3MemoryVideo");
 
+    level3MemoryVideo.addEventListener("fullscreenchange", function () {
+    if (document.fullscreenElement === level3MemoryVideo) {
+        level3MemoryVideo.style.width = "100vw";
+        level3MemoryVideo.style.height = "100vh";
+        level3MemoryVideo.style.objectFit = "contain";
+    }
+});
+
 const memoryMusic = document.querySelector("#memoryMusic");
 memoryMusic.loop = true;
 

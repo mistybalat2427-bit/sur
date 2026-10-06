@@ -904,17 +904,7 @@ const level3VideoScreen =
 
 const level3MemoryVideo =
     document.querySelector("#level3MemoryVideo");
-    level3MemoryVideo.addEventListener("fullscreenchange", async function () {
-    if (document.fullscreenElement === level3MemoryVideo) {
-        try {
-            if (screen.orientation && screen.orientation.lock) {
-                await screen.orientation.lock("portrait");
-            }
-        } catch (error) {
-            console.log("Portrait lock not supported.");
-        }
-    }
-});
+    
 
    
 const memoryMusic = document.querySelector("#memoryMusic");

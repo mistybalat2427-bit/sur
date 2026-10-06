@@ -12682,6 +12682,19 @@ body.chapter-birthday {
         aspect-ratio: 9 / 16;
     }
 }
+
+/* =================================================
+   LEVEL 3 VIDEO — FULLSCREEN PORTRAIT
+   ================================================= */
+
+#level3MemoryVideo:fullscreen {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    background: #000;
+}
 /* =====================================================
    END
    ===================================================== */
